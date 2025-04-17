@@ -11,7 +11,7 @@ Browse the latest `IdentityServer8 source code onGitHub <https://github.com/omar
 .. warning:: 
    This is a revival of the archived IdentityServer4 project which started a new `company <https://duendesoftware.com/>`_ as of Oct, 1st 2020. 
    The new Duende IdentityServer is not longer free open source, but now has various commercial licenses and paid upgrade package.
-   IdentityServer8 and dependenices have been upgraded to DotNet 8 and will be maintained by HigginsSoft, Alexander Higgins and the community as an Open Source project. 
+   IdentityServer8 and dependenices have been upgraded to DotNet 8 and will be maintained by HigginsSoft, Omar Baruzzo and the community as an Open Source project. 
 
 .. note:: This docs cover the latest version on main branch. This might not be released yet. Use the version picker in the lower left corner to select docs for a specific version.
 

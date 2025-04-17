@@ -19,8 +19,8 @@
 
 
         <Description>OpenID Connect and OAuth 2.0 Framework for ASP.NET Core</Description>
-        <Copyright>Copyright 2024 HigginsSoft. Alexander Higgins</Copyright>
-        <Authors>HigginsSoft, Alexander Higgins, Brock Allen, Dominick Baier</Authors>
+        <Copyright>Copyright 2024 HigginsSoft. Omar Baruzzo</Copyright>
+        <Authors>HigginsSoft, Omar Baruzzo, Brock Allen, Dominick Baier</Authors>
   
         <PackageTags>OAuth2 OAuth 2.0 OpenID Connect Security Identity IdentityServer Admin IdentityServer8 OpenIDConnect </PackageTags>
 
