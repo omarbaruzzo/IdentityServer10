@@ -69,7 +69,7 @@ jobs:
       uses: codecov/codecov-action@v4.0.1
       env:
         token: ${{ secrets.CODECOV_TOKEN }}
-        slug: alexhiggins732/IdentityServer8
+        slug: omarbaruzzo/IdentityServer8
         CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
     - name: Push
