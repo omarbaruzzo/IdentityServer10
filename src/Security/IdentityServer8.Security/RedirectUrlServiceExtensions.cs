@@ -1,5 +1,5 @@
 ﻿/*
- Copyright (c) 2024 HigginsSoft, Omar Baruzzo - https://github.com/omarbaruzzo/ 
+ Copyright (c) 2024 OmarBaruzzo, Omar Baruzzo - https://github.com/omarbaruzzo/ 
 
  Copyright (c) 2018, Brock Allen & Dominick Baier. All rights reserved.
 

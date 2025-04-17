@@ -9,7 +9,7 @@ It is recommend you update all previous version, 4 or 8, to the latest version t
 - [Support](https://identityserver8.readthedocs.io/en/latest/into/support.html)
 - [Gitter Chat](https://app.gitter.im/#/room/#identityserver8:gitter.im)
 
-[HigginsSoft.IdentityServer8 and Admin UI Nuget Packages](https://www.nuget.org/packages?q=HigginsSoft.IdentityServer8) are available here for use in DotNet 8.
+[OmarBaruzzo.IdentityServer8 and Admin UI Nuget Packages](https://www.nuget.org/packages?q=OmarBaruzzo.IdentityServer8) are available here for use in DotNet 8.
 
 All new development in the archived repository has moved to a paid commercial version in the [Duende Software](https://github.com/duendesoftware) organization. 
 
@@ -49,32 +49,32 @@ In the meantime, NuGet packages will be published to the [IdentityServer8 NuGet 
 ### Identity Server 8
 |Package||
 | ------------- | ------------- |
-|[HigginsSoft.IdentityServer8](https://www.nuget.org/packages?q=HigginsSoft.IdentityServer8)|![NuGet Downloads](https://img.shields.io/nuget/dt/HigginsSoft.IdentityServer8)|
-|[HigginsSoft.IdentityServer8.Storage](https://www.nuget.org/packages?q=HigginsSoft.IdentityServer8.Storage)|![NuGet Downloads](https://img.shields.io/nuget/dt/HigginsSoft.IdentityServer8.Storage)|
-|[HigginsSoft.IdentityServer8.EntityFramework](https://www.nuget.org/packages?q=HigginsSoft.IdentityServer8.EntityFramework)|![NuGet Downloads](https://img.shields.io/nuget/dt/HigginsSoft.IdentityServer8.EntityFramework)|
-|[HigginsSoft.IdentityServer8.EntityFramework.Storage](https://www.nuget.org/packages?q=HigginsSoft.IdentityServer8.EntityFramework.Storage)|![NuGet Downloads](https://img.shields.io/nuget/dt/HigginsSoft.IdentityServer8.EntityFramework.Storage)|
-|[HigginsSoft.IdentityServer8.AspNetIdentity](https://www.nuget.org/packages?q=HigginsSoft.IdentityServer8.AspNetIdentity)|![NuGet Downloads](https://img.shields.io/nuget/dt/HigginsSoft.IdentityServer8.AspNetIdentity)|
+|[OmarBaruzzo.IdentityServer8](https://www.nuget.org/packages?q=OmarBaruzzo.IdentityServer8)|![NuGet Downloads](https://img.shields.io/nuget/dt/OmarBaruzzo.IdentityServer8)|
+|[OmarBaruzzo.IdentityServer8.Storage](https://www.nuget.org/packages?q=OmarBaruzzo.IdentityServer8.Storage)|![NuGet Downloads](https://img.shields.io/nuget/dt/OmarBaruzzo.IdentityServer8.Storage)|
+|[OmarBaruzzo.IdentityServer8.EntityFramework](https://www.nuget.org/packages?q=OmarBaruzzo.IdentityServer8.EntityFramework)|![NuGet Downloads](https://img.shields.io/nuget/dt/OmarBaruzzo.IdentityServer8.EntityFramework)|
+|[OmarBaruzzo.IdentityServer8.EntityFramework.Storage](https://www.nuget.org/packages?q=OmarBaruzzo.IdentityServer8.EntityFramework.Storage)|![NuGet Downloads](https://img.shields.io/nuget/dt/OmarBaruzzo.IdentityServer8.EntityFramework.Storage)|
+|[OmarBaruzzo.IdentityServer8.AspNetIdentity](https://www.nuget.org/packages?q=OmarBaruzzo.IdentityServer8.AspNetIdentity)|![NuGet Downloads](https://img.shields.io/nuget/dt/OmarBaruzzo.IdentityServer8.AspNetIdentity)|
 | | |
 
 ### Identity Server 8 Administration UI
 |Package||
 | ------------- | ------------- |
-|[HigginsSoft.IdentityServer8.Shared](https://www.nuget.org/packages?q=HigginsSoft.IdentityServer8.Shared)|![NuGet Downloads](https://img.shields.io/nuget/dt/HigginsSoft.IdentityServer8.Shared)|
-|[HigginsSoft.IdentityServer8.Admin.UI](https://www.nuget.org/packages?q=HigginsSoft.IdentityServer8.Admin.UI)|![NuGet Downloads](https://img.shields.io/nuget/dt/HigginsSoft.IdentityServer8.Admin.UI)|
-|[HigginsSoft.IdentityServer8.Shared.Configuration](https://www.nuget.org/packages?q=HigginsSoft.IdentityServer8.Shared.Configuration)|![NuGet Downloads](https://img.shields.io/nuget/dt/HigginsSoft.IdentityServer8.Shared.Configuration)|
-|[HigginsSoft.IdentityServer8.Admin.Api](https://www.nuget.org/packages?q=HigginsSoft.IdentityServer8.Admin.Api)|![NuGet Downloads](https://img.shields.io/nuget/dt/HigginsSoft.IdentityServer8.Admin.Api)|
-|[HigginsSoft.IdentityServer8.Admin](https://www.nuget.org/packages?q=HigginsSoft.IdentityServer8.Admin)|![NuGet Downloads](https://img.shields.io/nuget/dt/HigginsSoft.IdentityServer8.Admin)|
-|[HigginsSoft.IdentityServer8.Admin.BusinessLogic.Identity](https://www.nuget.org/packages?q=HigginsSoft.IdentityServer8.Admin.BusinessLogic.Identity)|![NuGet Downloads](https://img.shields.io/nuget/dt/HigginsSoft.IdentityServer8.Admin.BusinessLogic.Identity)|
-|[HigginsSoft.IdentityServer8.Admin.EntityFramework](https://www.nuget.org/packages?q=HigginsSoft.IdentityServer8.Admin.EntityFramework)|![NuGet Downloads](https://img.shields.io/nuget/dt/HigginsSoft.IdentityServer8.Admin.EntityFramework)|
-|[HigginsSoft.IdentityServer8.Admin.EntityFramework.Identity](https://www.nuget.org/packages?q=HigginsSoft.IdentityServer8.Admin.EntityFramework.Identity)|![NuGet Downloads](https://img.shields.io/nuget/dt/HigginsSoft.IdentityServer8.Admin.EntityFramework.Identity)|
-|[HigginsSoft.IdentityServer8.Admin.BusinessLogic.Shared](https://www.nuget.org/packages?q=HigginsSoft.IdentityServer8.Admin.BusinessLogic.Shared)|![NuGet Downloads](https://img.shields.io/nuget/dt/HigginsSoft.IdentityServer8.Admin.BusinessLogic.Shared)|
-|[HigginsSoft.IdentityServer8.Admin.EntityFramework.Extensions](https://www.nuget.org/packages?q=HigginsSoft.IdentityServer8.Admin.EntityFramework.Extensions)|![NuGet Downloads](https://img.shields.io/nuget/dt/HigginsSoft.IdentityServer8.Admin.EntityFramework.Extensions)|
-|[HigginsSoft.IdentityServer8.Admin.EntityFramework.PostgreSQL](https://www.nuget.org/packages?q=HigginsSoft.IdentityServer8.Admin.EntityFramework.PostgreSQL)|![NuGet Downloads](https://img.shields.io/nuget/dt/HigginsSoft.IdentityServer8.Admin.EntityFramework.PostgreSQL)|
-|[HigginsSoft.IdentityServer8.Admin.EntityFramework.MySql](https://www.nuget.org/packages?q=HigginsSoft.IdentityServer8.Admin.EntityFramework.MySql)|![NuGet Downloads](https://img.shields.io/nuget/dt/HigginsSoft.IdentityServer8.Admin.EntityFramework.MySql)|
-|[HigginsSoft.IdentityServer8.Admin.EntityFramework.SqlServer](https://www.nuget.org/packages?q=HigginsSoft.IdentityServer8.Admin.EntityFramework.SqlServer)|![NuGet Downloads](https://img.shields.io/nuget/dt/HigginsSoft.IdentityServer8.Admin.EntityFramework.SqlServer)|
-|[HigginsSoft.IdentityServer8.Admin.EntityFramework.Shared](https://www.nuget.org/packages?q=HigginsSoft.IdentityServer8.Admin.EntityFramework.Shared)|![NuGet Downloads](https://img.shields.io/nuget/dt/HigginsSoft.IdentityServer8.Admin.EntityFramework.Shared)|
-|[HigginsSoft.IdentityServer8.Admin.BusinessLogic](https://www.nuget.org/packages?q=HigginsSoft.IdentityServer8.Admin.BusinessLogic)|![NuGet Downloads](https://img.shields.io/nuget/dt/HigginsSoft.IdentityServer8.Admin.BusinessLogic)|
-|[HigginsSoft.IdentityServer8.Admin.EntityFramework.Configuration](https://www.nuget.org/packages?q=HigginsSoft.IdentityServer8.Admin.EntityFramework.Configuration)|![NuGet Downloads](https://img.shields.io/nuget/dt/HigginsSoft.IdentityServer8.Admin.EntityFramework.Configuration)|
+|[OmarBaruzzo.IdentityServer8.Shared](https://www.nuget.org/packages?q=OmarBaruzzo.IdentityServer8.Shared)|![NuGet Downloads](https://img.shields.io/nuget/dt/OmarBaruzzo.IdentityServer8.Shared)|
+|[OmarBaruzzo.IdentityServer8.Admin.UI](https://www.nuget.org/packages?q=OmarBaruzzo.IdentityServer8.Admin.UI)|![NuGet Downloads](https://img.shields.io/nuget/dt/OmarBaruzzo.IdentityServer8.Admin.UI)|
+|[OmarBaruzzo.IdentityServer8.Shared.Configuration](https://www.nuget.org/packages?q=OmarBaruzzo.IdentityServer8.Shared.Configuration)|![NuGet Downloads](https://img.shields.io/nuget/dt/OmarBaruzzo.IdentityServer8.Shared.Configuration)|
+|[OmarBaruzzo.IdentityServer8.Admin.Api](https://www.nuget.org/packages?q=OmarBaruzzo.IdentityServer8.Admin.Api)|![NuGet Downloads](https://img.shields.io/nuget/dt/OmarBaruzzo.IdentityServer8.Admin.Api)|
+|[OmarBaruzzo.IdentityServer8.Admin](https://www.nuget.org/packages?q=OmarBaruzzo.IdentityServer8.Admin)|![NuGet Downloads](https://img.shields.io/nuget/dt/OmarBaruzzo.IdentityServer8.Admin)|
+|[OmarBaruzzo.IdentityServer8.Admin.BusinessLogic.Identity](https://www.nuget.org/packages?q=OmarBaruzzo.IdentityServer8.Admin.BusinessLogic.Identity)|![NuGet Downloads](https://img.shields.io/nuget/dt/OmarBaruzzo.IdentityServer8.Admin.BusinessLogic.Identity)|
+|[OmarBaruzzo.IdentityServer8.Admin.EntityFramework](https://www.nuget.org/packages?q=OmarBaruzzo.IdentityServer8.Admin.EntityFramework)|![NuGet Downloads](https://img.shields.io/nuget/dt/OmarBaruzzo.IdentityServer8.Admin.EntityFramework)|
+|[OmarBaruzzo.IdentityServer8.Admin.EntityFramework.Identity](https://www.nuget.org/packages?q=OmarBaruzzo.IdentityServer8.Admin.EntityFramework.Identity)|![NuGet Downloads](https://img.shields.io/nuget/dt/OmarBaruzzo.IdentityServer8.Admin.EntityFramework.Identity)|
+|[OmarBaruzzo.IdentityServer8.Admin.BusinessLogic.Shared](https://www.nuget.org/packages?q=OmarBaruzzo.IdentityServer8.Admin.BusinessLogic.Shared)|![NuGet Downloads](https://img.shields.io/nuget/dt/OmarBaruzzo.IdentityServer8.Admin.BusinessLogic.Shared)|
+|[OmarBaruzzo.IdentityServer8.Admin.EntityFramework.Extensions](https://www.nuget.org/packages?q=OmarBaruzzo.IdentityServer8.Admin.EntityFramework.Extensions)|![NuGet Downloads](https://img.shields.io/nuget/dt/OmarBaruzzo.IdentityServer8.Admin.EntityFramework.Extensions)|
+|[OmarBaruzzo.IdentityServer8.Admin.EntityFramework.PostgreSQL](https://www.nuget.org/packages?q=OmarBaruzzo.IdentityServer8.Admin.EntityFramework.PostgreSQL)|![NuGet Downloads](https://img.shields.io/nuget/dt/OmarBaruzzo.IdentityServer8.Admin.EntityFramework.PostgreSQL)|
+|[OmarBaruzzo.IdentityServer8.Admin.EntityFramework.MySql](https://www.nuget.org/packages?q=OmarBaruzzo.IdentityServer8.Admin.EntityFramework.MySql)|![NuGet Downloads](https://img.shields.io/nuget/dt/OmarBaruzzo.IdentityServer8.Admin.EntityFramework.MySql)|
+|[OmarBaruzzo.IdentityServer8.Admin.EntityFramework.SqlServer](https://www.nuget.org/packages?q=OmarBaruzzo.IdentityServer8.Admin.EntityFramework.SqlServer)|![NuGet Downloads](https://img.shields.io/nuget/dt/OmarBaruzzo.IdentityServer8.Admin.EntityFramework.SqlServer)|
+|[OmarBaruzzo.IdentityServer8.Admin.EntityFramework.Shared](https://www.nuget.org/packages?q=OmarBaruzzo.IdentityServer8.Admin.EntityFramework.Shared)|![NuGet Downloads](https://img.shields.io/nuget/dt/OmarBaruzzo.IdentityServer8.Admin.EntityFramework.Shared)|
+|[OmarBaruzzo.IdentityServer8.Admin.BusinessLogic](https://www.nuget.org/packages?q=OmarBaruzzo.IdentityServer8.Admin.BusinessLogic)|![NuGet Downloads](https://img.shields.io/nuget/dt/OmarBaruzzo.IdentityServer8.Admin.BusinessLogic)|
+|[OmarBaruzzo.IdentityServer8.Admin.EntityFramework.Configuration](https://www.nuget.org/packages?q=OmarBaruzzo.IdentityServer8.Admin.EntityFramework.Configuration)|![NuGet Downloads](https://img.shields.io/nuget/dt/OmarBaruzzo.IdentityServer8.Admin.EntityFramework.Configuration)|
 | | |
 
 

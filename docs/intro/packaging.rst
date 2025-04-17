@@ -11,9 +11,9 @@ Contains the core IdentityServer object model, services and middleware as well a
 
 nugets:
 
-* `HigginsSoft.IdentityServer8 <https://www.nuget.org/packages/HigginsSoft.IdentityServer8/>`_
-* `HigginsSoft.IdentityServer8.EntityFramework <https://www.nuget.org/packages/HigginsSoft.IdentityServer8.EntityFramework>`_
-* `HigginsSoft.IdentityServer8.AspNetIdentity <https://www.nuget.org/packages/HigginsSoft.IdentityServer8.AspNetIdentity>`_
+* `OmarBaruzzo.IdentityServer8 <https://www.nuget.org/packages/OmarBaruzzo.IdentityServer8/>`_
+* `OmarBaruzzo.IdentityServer8.EntityFramework <https://www.nuget.org/packages/OmarBaruzzo.IdentityServer8.EntityFramework>`_
+* `OmarBaruzzo.IdentityServer8.AspNetIdentity <https://www.nuget.org/packages/OmarBaruzzo.IdentityServer8.AspNetIdentity>`_
 
 Quickstart UI
 ^^^^^^^^^^^^^
@@ -23,13 +23,13 @@ Contains a simple starter UI including login, logout and consent pages.
 
 Access token validation handler
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-`nuget <https://www.nuget.org/packages/HigginsSoft.IdentityServer8.AccessTokenValidation>`_ | `github <https://github.com/omarbaruzzo/IdentityServer8.AccessTokenValidation>`_
+`nuget <https://www.nuget.org/packages/OmarBaruzzo.IdentityServer8.AccessTokenValidation>`_ | `github <https://github.com/omarbaruzzo/IdentityServer8.AccessTokenValidation>`_
 
 ASP.NET Core authentication handler for validating tokens in APIs. The handler allows supporting both JWT and reference tokens in the same API.
 
 Templates
 ^^^^^^^^^
-`nuget <https://www.nuget.org/packages/HigginsSoft.IdentityServer8.Templates>`_ | `github <https://github.com/omarbaruzzo/IdentityServer8.Templates>`_
+`nuget <https://www.nuget.org/packages/OmarBaruzzo.IdentityServer8.Templates>`_ | `github <https://github.com/omarbaruzzo/IdentityServer8.Templates>`_
 
 Contains templates for the dotnet CLI.
 
