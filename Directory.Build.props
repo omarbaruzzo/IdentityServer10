@@ -23,15 +23,15 @@
 
 
         <Description>OpenID Connect and OAuth 2.0 Framework for ASP.NET Core</Description>
-        <Copyright>Copyright 2024 OmarBaruzzo. Omar Baruzzo</Copyright>
-        <Authors>OmarBaruzzo, Omar Baruzzo, Brock Allen, Dominick Baier</Authors>
+        <Copyright>Copyright 2026 Omar Baruzzo. Omar Baruzzo</Copyright>
+        <Authors>Omar Baruzzo, Omar Baruzzo, Brock Allen, Dominick Baier</Authors>
   
-        <PackageTags>OAuth2 OAuth 2.0 OpenID Connect Security Identity IdentityServer Admin IdentityServer8 OpenIDConnect </PackageTags>
+        <PackageTags>OAuth2 OAuth 2.0 OpenID Connect Security Identity IdentityServer Admin IdentityServer10 OpenIDConnect </PackageTags>
 
 
-        <PackageProjectUrl>https://github.com/omarbaruzzo/IdentityServer8</PackageProjectUrl>
+        <PackageProjectUrl>https://github.com/omarbaruzzo/IdentityServer10</PackageProjectUrl>
         <RepositoryType>git</RepositoryType>
-        <PackageReleaseNotes>https://github.com/omarbaruzzo/IdentityServer8/releases</PackageReleaseNotes>
+        <PackageReleaseNotes>https://github.com/omarbaruzzo/IdentityServer10/releases</PackageReleaseNotes>
 
         <!-- Declare that the Repository URL can be published to NuSpec -->
         <PublishRepositoryUrl>true</PublishRepositoryUrl>
@@ -46,7 +46,7 @@
 
         <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
 
-        <!--<CodeAnalysisRuleset>$(MSBuildThisFileDirectory)IdentityServer8.DotNet.ruleset</CodeAnalysisRuleset>-->
+        <!--<CodeAnalysisRuleset>$(MSBuildThisFileDirectory)IdentityServer10.DotNet.ruleset</CodeAnalysisRuleset>-->
 
         <IsTrimmable>false</IsTrimmable>
         <EnableAOTAnalyzer>false</EnableAOTAnalyzer>

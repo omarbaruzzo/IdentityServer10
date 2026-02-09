@@ -10,14 +10,14 @@
  copies or substantial portions of the Software.
 */
 
-using IdentityServer8.EntityFramework.DbContexts;
+using IdentityServer10.EntityFramework.DbContexts;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
-using IdentityServer8.EntityFramework.Entities;
-using IdentityServer8.EntityFramework.Options;
+using IdentityServer10.EntityFramework.Entities;
+using IdentityServer10.EntityFramework.Options;
 using Xunit;
 
-namespace IdentityServer8.EntityFramework.IntegrationTests.DbContexts;
+namespace IdentityServer10.EntityFramework.IntegrationTests.DbContexts;
 
 public class ClientDbContextTests : IntegrationTest<ClientDbContextTests, ConfigurationDbContext, ConfigurationStoreOptions>
 {

@@ -12,7 +12,7 @@
 
 #pragma warning disable 1591
 
-namespace IdentityServer8.Stores.Serialization;
+namespace IdentityServer10.Stores.Serialization;
 
 public class ClaimConverter : JsonConverter
 {

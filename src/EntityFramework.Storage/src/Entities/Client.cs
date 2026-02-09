@@ -12,9 +12,9 @@
 
 #pragma warning disable 1591
 
-using IdentityServer8.Models;
+using IdentityServer10.Models;
 
-namespace IdentityServer8.EntityFramework.Entities
+namespace IdentityServer10.EntityFramework.Entities
 {
     public class Client
     {

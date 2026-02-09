@@ -11,16 +11,16 @@
 */
 
 using FluentAssertions;
-using IdentityServer8.EntityFramework.DbContexts;
-using IdentityServer8.EntityFramework.Mappers;
-using IdentityServer8.EntityFramework.Options;
-using IdentityServer8.EntityFramework.Stores;
-using IdentityServer8.Models;
-using IdentityServer8.Stores;
+using IdentityServer10.EntityFramework.DbContexts;
+using IdentityServer10.EntityFramework.Mappers;
+using IdentityServer10.EntityFramework.Options;
+using IdentityServer10.EntityFramework.Stores;
+using IdentityServer10.Models;
+using IdentityServer10.Stores;
 using Microsoft.EntityFrameworkCore;
 using Xunit;
 
-namespace IdentityServer8.EntityFramework.IntegrationTests.Stores;
+namespace IdentityServer10.EntityFramework.IntegrationTests.Stores;
 
 public class PersistedGrantStoreTests : IntegrationTest<PersistedGrantStoreTests, PersistedGrantDbContext, OperationalStoreOptions>
 {

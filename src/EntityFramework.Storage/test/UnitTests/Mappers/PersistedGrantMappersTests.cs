@@ -11,11 +11,11 @@
 */
 
 using FluentAssertions;
-using IdentityServer8.EntityFramework.Mappers;
-using IdentityServer8.Models;
+using IdentityServer10.EntityFramework.Mappers;
+using IdentityServer10.Models;
 using Xunit;
 
-namespace IdentityServer8.EntityFramework.UnitTests.Mappers;
+namespace IdentityServer10.EntityFramework.UnitTests.Mappers;
 
 public class PersistedGrantMappersTests
 {

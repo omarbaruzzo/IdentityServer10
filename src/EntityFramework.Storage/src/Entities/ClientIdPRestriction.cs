@@ -12,7 +12,7 @@
 
 #pragma warning disable 1591
 
-namespace IdentityServer8.EntityFramework.Entities
+namespace IdentityServer10.EntityFramework.Entities
 {
     public class ClientIdPRestriction
     {

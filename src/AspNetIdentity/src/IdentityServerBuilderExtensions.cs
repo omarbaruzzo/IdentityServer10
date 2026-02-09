@@ -53,7 +53,7 @@ public static class IdentityServerBuilderExtensions
         builder.Services.ConfigureExternalCookie(options =>
         {
             options.Cookie.IsEssential = true;
-            // https://github.com/omarbaruzzo/IdentityServer8/issues/2595
+            // https://github.com/omarbaruzzo/IdentityServer10/issues/2595
             options.Cookie.SameSite = AspNetCore.Http.SameSiteMode.None;
         });
 

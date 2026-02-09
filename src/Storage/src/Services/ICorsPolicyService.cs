@@ -10,7 +10,7 @@
  copies or substantial portions of the Software.
 */
 
-namespace IdentityServer8.Services;
+namespace IdentityServer10.Services;
 
 /// <summary>
 /// Service that determines if CORS is allowed.

@@ -1,13 +1,13 @@
 @using System.Diagnostics
 
 @{
-    var version = FileVersionInfo.GetVersionInfo(typeof(IdentityServer8.Hosting.IdentityServerMiddleware).Assembly.Location).ProductVersion.Split('+').First();
+    var version = FileVersionInfo.GetVersionInfo(typeof(IdentityServer10.Hosting.IdentityServerMiddleware).Assembly.Location).ProductVersion.Split('+').First();
 }
 
 <div class="welcome-page">
     <h1>
         <img src="~/icon.jpg">
-        Welcome to IdentityServer8
+        Welcome to IdentityServer10
         <small class="text-muted">(version @version)</small>
     </h1>
 
@@ -25,8 +25,8 @@
         </li>
         <li>
             Here are links to the
-            <a href="https://github.com/omarbaruzzo/IdentityServer8">source code repository</a>,
-            and <a href="https://github.com/omarbaruzzo/IdentityServer8/tree/main/samples">ready to use samples</a>.
+            <a href="https://github.com/omarbaruzzo/IdentityServer10">source code repository</a>,
+            and <a href="https://github.com/omarbaruzzo/IdentityServer10/tree/main/samples">ready to use samples</a>.
         </li>
     </ul>
 </div>

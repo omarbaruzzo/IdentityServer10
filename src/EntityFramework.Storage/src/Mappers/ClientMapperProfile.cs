@@ -10,9 +10,9 @@
  copies or substantial portions of the Software.
 */
 
-using IdentityServer8.Models;
+using IdentityServer10.Models;
 
-namespace IdentityServer8.EntityFramework.Mappers
+namespace IdentityServer10.EntityFramework.Mappers
 {
     /// <summary>
     /// Defines entity/model mapping for clients.

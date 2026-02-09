@@ -10,9 +10,9 @@
  copies or substantial portions of the Software.
 */
 
-using IdentityServer8.EntityFramework;
-using IdentityServer8.EntityFramework.Entities;
-using PersistedGrant = IdentityServer8.EntityFramework.Entities.PersistedGrant;
+using IdentityServer10.EntityFramework;
+using IdentityServer10.EntityFramework.Entities;
+using PersistedGrant = IdentityServer10.EntityFramework.Entities.PersistedGrant;
 
 namespace IdentityServerHost
 {

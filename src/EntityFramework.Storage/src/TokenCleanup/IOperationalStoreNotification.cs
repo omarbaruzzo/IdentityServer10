@@ -10,9 +10,9 @@
  copies or substantial portions of the Software.
 */
 
-using IdentityServer8.EntityFramework.Entities;
+using IdentityServer10.EntityFramework.Entities;
 
-namespace IdentityServer8.EntityFramework
+namespace IdentityServer10.EntityFramework
 {
     /// <summary>
     /// Interface to model notifications from the TokenCleanup feature.
