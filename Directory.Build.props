@@ -1,10 +1,14 @@
 <Project>
+    <!-- Disabilita il workload resolver per evitare MSB4276 (directory WorkloadAutoImportPropsLocator mancanti in alcuni SDK 10) -->
+    <PropertyGroup>
+        <MSBuildEnableWorkloadResolver>false</MSBuildEnableWorkloadResolver>
+    </PropertyGroup>
 
     <PropertyGroup>
-        <TargetFramework>net8.0</TargetFramework>
+        <TargetFramework>net10.0</TargetFramework>
         <!--always bump /version.json and /docs/conf.py to <Version>X.Y.Z</Version>to keep nuget, build and document versions in sync-->
-        <Version>8.0.4</Version>
-		<IdentityServerVersion>8.0.4</IdentityServerVersion>
+        <Version>10.0.0</Version>
+		<IdentityServerVersion>10.0.0</IdentityServerVersion>
         <PackageId>OmarBaruzzo.$(MSBuildProjectName)</PackageId>
         <Title>$(MSBuildProjectName)</Title>
         <ImplicitUsings>enable</ImplicitUsings>
@@ -12,7 +16,7 @@
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
 
         <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-        <NoWarn>$(NoWarn);CS0618;SYSLIB0023;SYSLIB0020;EF1001</NoWarn>
+        <NoWarn>$(NoWarn);CS0618;CS8632;SYSLIB0023;SYSLIB0020;SYSLIB0057;EF1001;ASPDEPR004;ASPDEPR008</NoWarn>
 
 		<SignAssembly>true</SignAssembly>
 		<AssemblyOriginatorKeyFile>$(SolutionDir)../key.snk</AssemblyOriginatorKeyFile>
