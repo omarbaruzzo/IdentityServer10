@@ -1,23 +1,33 @@
----
-name: Bug report
-about: Create a report to help us improve
-labels: bug report
----
+## Description
 
-**We can only help you if you are on the latest version.**
+Brief description of what this PR does and why.
 
-Please only use the issue tracker for bug reports and/or feature requests. For general security questions, or free or commercial support options do __not__ use the issue tracker and instead see [here](http://identityserver8.readthedocs.io/en/latest/intro/support.html) for more details.
+## Type of change
 
-For bug reports,  include the relevant log files related to your issue. See here how to enable [logging](https://identityserver8.readthedocs.io/en/latest/topics/logging.html). Delete this line once you have.
+- [ ] Bug fix (non-breaking change that fixes an issue)
+- [ ] New feature (non-breaking change that adds functionality)
+- [ ] Breaking change (fix or feature that would cause existing behavior to change)
+- [ ] Documentation or configuration only
+- [ ] Refactor (no functional change)
 
-Finally, please keep the issue concise and to the point. If you paste in more code than the text for the issue you are reporting then we will most likely not read it. 
+## Security / protocol impact
 
-### Issue / Steps to reproduce the problem
+- [ ] This change touches authentication, authorization, token handling, or OAuth2/OIDC flows.  
+  _(If checked, describe impact and any migration or configuration needed.)_
+- [ ] This change does **not** affect security or protocol behavior.
 
+## Checklist
 
+- [ ] My code follows the project style (see existing code and `.editorconfig`).
+- [ ] I have added or updated tests that cover my changes.
+- [ ] All new and existing tests pass locally (e.g. `dotnet test src/IdentityServer10.sln`).
+- [ ] I have updated documentation or comments where relevant.
+- [ ] No sensitive data (secrets, keys, credentials) is included in this PR.
 
-### Relevant parts of the log file
+## Related issues
 
-```
-<log goes here>
-```
+_(Optional)_ Fixes #issue_number or relates to #issue_number.
+
+## Additional notes
+
+_(Optional)_ Any extra context for reviewers.
