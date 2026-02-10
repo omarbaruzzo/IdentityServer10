@@ -297,3 +297,4 @@ __pycache__/
 /shared/nginx/certs/
 lib/
 
+src/nuget/

@@ -41,12 +41,11 @@ public class CorsPolicyService : ICorsPolicyService
     public async Task<bool> IsOriginAllowedAsync(string origin)
     {
         origin = origin.ToLowerInvariant();
-
         // doing this here and not in the ctor because: https://github.com/aspnet/CORS/issues/105
         var dbContext = _context.HttpContext.RequestServices.GetRequiredService<IConfigurationDbContext>();
 
         var query = from o in dbContext.ClientCorsOrigins
-                    where o.Origin == origin
+                        where o.Origin.ToLower() == origin
                     select o;
         
         var isAllowed = await query.AnyAsync();

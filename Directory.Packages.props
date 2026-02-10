@@ -36,7 +36,7 @@
     <PackageVersion Include="FluentAssertions" Version="6.11.0" />
     <PackageVersion Include="FluentValidation" Version="11.9.0" />
     <PackageVersion Include="FluentValidation.AspNetCore" Version="11.3.0" />
-    <PackageVersion Include="Google.Protobuf" Version="3.23.4" />
+    <PackageVersion Include="Google.Protobuf" Version="3.25.5" />
     <PackageVersion Include="Grpc" Version="$(GrpcVersion)" />
     <PackageVersion Include="Grpc.AspNetCore" Version="$(GrpcVersion)" />
     <PackageVersion Include="Grpc.AspNetCore.Server" Version="$(GrpcVersion)" />
@@ -45,7 +45,7 @@
     <PackageVersion Include="Grpc.Net.Client" Version="$(GrpcVersion)" />
     <PackageVersion Include="Grpc.Net.ClientFactory" Version="$(GrpcVersion)" />
     <PackageVersion Include="Grpc.Tools" Version="$(GrpcVersion)" PrivateAssets="All" />
-    <PackageVersion Include="HtmlAgilityPack" Version="1.11.40" />
+    <PackageVersion Include="HtmlAgilityPack" Version="1.12.4" />
     <PackageVersion Include="Humanizer.Core" Version="2.14.1" />
     <PackageVersion Include="IdentityModel" Version="6.2.0" />
     <PackageVersion Include="IdentityModel.OidcClient" Version="5.3.0-preview.1" />
@@ -54,7 +54,7 @@
     <PackageVersion Include="IdentityModel.AspNetCore.OAuth2Introspection" Version="4.0.1" />
     <PackageVersion Include="IdentityServer4.KeyManagement" Version="2.1.0" />
     <PackageVersion Include="jQuery" Version="3.7.1" />
-    <PackageVersion Include="jQuery.validation" Version="1.19.5" />
+    <PackageVersion Include="jQuery.validation" Version="1.21.0" />
     <PackageVersion Include="Microsoft.AspNetCore.Authentication.Certificate" Version="$(AspnetVersion)" />
     <PackageVersion Include="Microsoft.AspNetCore.Authentication.Google" Version="3.1.5" />
     <PackageVersion Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="$(AspnetVersion)" />
