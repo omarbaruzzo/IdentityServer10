@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2024 HigginsSoft, Alexander Higgins - https://github.com/alexhiggins732/ 
+ Copyright (c) 2024 OmarBaruzzo, Omar Baruzzo - https://github.com/omarbaruzzo/ 
 
  Copyright (c) 2018, Brock Allen & Dominick Baier. All rights reserved.
 
@@ -10,9 +10,9 @@
  copies or substantial portions of the Software.
 */
 
-using IdentityServer8.EntityFramework.Entities;
+using IdentityServer10.EntityFramework.Entities;
 
-namespace IdentityServer8.EntityFramework.Extensions
+namespace IdentityServer10.EntityFramework.Extensions
 {
     /// <summary>
     /// Extension methods to define the database schema for the configuration and operational data stores.

@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2024 HigginsSoft, Alexander Higgins - https://github.com/alexhiggins732/ 
+ Copyright (c) 2024 OmarBaruzzo, Omar Baruzzo - https://github.com/omarbaruzzo/ 
 
  Copyright (c) 2018, Brock Allen & Dominick Baier. All rights reserved.
 
@@ -12,11 +12,11 @@
 
 using System.Linq;
 using FluentAssertions;
-using IdentityServer8.EntityFramework.Mappers;
-using IdentityServer8.Models;
+using IdentityServer10.EntityFramework.Mappers;
+using IdentityServer10.Models;
 using Xunit;
 
-namespace IdentityServer8.EntityFramework.UnitTests.Mappers;
+namespace IdentityServer10.EntityFramework.UnitTests.Mappers;
 
 public class ScopesMappersTests
 {

@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2024 HigginsSoft, Alexander Higgins - https://github.com/alexhiggins732/ 
+ Copyright (c) 2024 OmarBaruzzo, Omar Baruzzo - https://github.com/omarbaruzzo/ 
 
  Copyright (c) 2018, Brock Allen & Dominick Baier. All rights reserved.
 
@@ -15,7 +15,7 @@ using Microsoft.Extensions.Configuration;
 using System.Runtime.InteropServices;
 using Xunit;
 
-namespace IdentityServer8.EntityFramework.IntegrationTests;
+namespace IdentityServer10.EntityFramework.IntegrationTests;
 
 /// <summary>
 /// Base class for integration tests, responsible for initializing test database providers & an xUnit class fixture

@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2024 HigginsSoft, Alexander Higgins - https://github.com/alexhiggins732/ 
+ Copyright (c) 2024 OmarBaruzzo, Omar Baruzzo - https://github.com/omarbaruzzo/ 
 
  Copyright (c) 2018, Brock Allen & Dominick Baier. All rights reserved.
 
@@ -12,9 +12,9 @@
 
 #pragma warning disable 1591
 
-using IdentityServer8.Models;
+using IdentityServer10.Models;
 
-namespace IdentityServer8.EntityFramework.Entities
+namespace IdentityServer10.EntityFramework.Entities
 {
     public class Client
     {

@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2024 HigginsSoft, Alexander Higgins - https://github.com/alexhiggins732/ 
+ Copyright (c) 2024 OmarBaruzzo, Omar Baruzzo - https://github.com/omarbaruzzo/ 
 
  Copyright (c) 2018, Brock Allen & Dominick Baier. All rights reserved.
 
@@ -10,13 +10,13 @@
  copies or substantial portions of the Software.
 */
 
-namespace IdentityServer8.AspNetIdentity;
+namespace IdentityServer10.AspNetIdentity;
 
 /// <summary>
 /// IResourceOwnerPasswordValidator that integrates with ASP.NET Identity.
 /// </summary>
 /// <typeparam name="TUser">The type of the user.</typeparam>
-/// <seealso cref="IdentityServer8.Validation.IResourceOwnerPasswordValidator" />
+/// <seealso cref="IdentityServer10.Validation.IResourceOwnerPasswordValidator" />
 public class ResourceOwnerPasswordValidator<TUser> : IResourceOwnerPasswordValidator
     where TUser : class
 {

@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2024 HigginsSoft, Alexander Higgins - https://github.com/alexhiggins732/ 
+ Copyright (c) 2024 OmarBaruzzo, Omar Baruzzo - https://github.com/omarbaruzzo/ 
 
  Copyright (c) 2018, Brock Allen & Dominick Baier. All rights reserved.
 
@@ -10,15 +10,15 @@
  copies or substantial portions of the Software.
 */
 
-using IdentityServer8.EntityFramework.Entities;
-using IdentityServer8.Models;
+using IdentityServer10.EntityFramework.Entities;
+using IdentityServer10.Models;
 
-namespace IdentityServer8.EntityFramework.Stores
+namespace IdentityServer10.EntityFramework.Stores
 {
     /// <summary>
     /// Implementation of IDeviceFlowStore thats uses EF.
     /// </summary>
-    /// <seealso cref="IdentityServer8.Stores.IDeviceFlowStore" />
+    /// <seealso cref="IdentityServer10.Stores.IDeviceFlowStore" />
     public class DeviceFlowStore : IDeviceFlowStore
     {
         /// <summary>

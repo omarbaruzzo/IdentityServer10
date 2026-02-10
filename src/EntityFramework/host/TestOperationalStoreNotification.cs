@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2024 HigginsSoft, Alexander Higgins - https://github.com/alexhiggins732/ 
+ Copyright (c) 2024 OmarBaruzzo, Omar Baruzzo - https://github.com/omarbaruzzo/ 
 
  Copyright (c) 2018, Brock Allen & Dominick Baier. All rights reserved.
 
@@ -10,9 +10,9 @@
  copies or substantial portions of the Software.
 */
 
-using IdentityServer8.EntityFramework;
-using IdentityServer8.EntityFramework.Entities;
-using PersistedGrant = IdentityServer8.EntityFramework.Entities.PersistedGrant;
+using IdentityServer10.EntityFramework;
+using IdentityServer10.EntityFramework.Entities;
+using PersistedGrant = IdentityServer10.EntityFramework.Entities.PersistedGrant;
 
 namespace IdentityServerHost
 {

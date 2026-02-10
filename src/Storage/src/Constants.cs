@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2024 HigginsSoft, Alexander Higgins - https://github.com/alexhiggins732/ 
+ Copyright (c) 2024 OmarBaruzzo, Omar Baruzzo - https://github.com/omarbaruzzo/ 
 
  Copyright (c) 2018, Brock Allen & Dominick Baier. All rights reserved.
 
@@ -10,10 +10,10 @@
  copies or substantial portions of the Software.
 */
 
-namespace IdentityServer8;
+namespace IdentityServer10;
 
 internal static class Constants
 {
-    public const string IdentityServerName               = "IdentityServer8";
+    public const string IdentityServerName               = "IdentityServer10";
     public const string IdentityServerAuthenticationType = IdentityServerName;
 }

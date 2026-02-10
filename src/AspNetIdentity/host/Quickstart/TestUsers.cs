@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2024 HigginsSoft, Alexander Higgins - https://github.com/alexhiggins732/ 
+ Copyright (c) 2024 OmarBaruzzo, Omar Baruzzo - https://github.com/omarbaruzzo/ 
 
  Copyright (c) 2018, Brock Allen & Dominick Baier. All rights reserved.
 
@@ -25,7 +25,7 @@ public class TestUsers
                 new Claim(JwtClaimTypes.Email, "AliceSmith@email.com"),
                 new Claim(JwtClaimTypes.EmailVerified, "true", ClaimValueTypes.Boolean),
                 new Claim(JwtClaimTypes.WebSite, "http://alice.com"),
-                new Claim(JwtClaimTypes.Address, @"{ 'street_address': 'One Hacker Way', 'locality': 'Heidelberg', 'postal_code': 69118, 'country': 'Germany' }", IdentityServer8.IdentityServerConstants.ClaimValueTypes.Json)
+                new Claim(JwtClaimTypes.Address, @"{ 'street_address': 'One Hacker Way', 'locality': 'Heidelberg', 'postal_code': 69118, 'country': 'Germany' }", IdentityServer10.IdentityServerConstants.ClaimValueTypes.Json)
             }
         },
         new TestUser{SubjectId = "88421113", Username = "bob", Password = "bob", 
@@ -37,7 +37,7 @@ public class TestUsers
                 new Claim(JwtClaimTypes.Email, "BobSmith@email.com"),
                 new Claim(JwtClaimTypes.EmailVerified, "true", ClaimValueTypes.Boolean),
                 new Claim(JwtClaimTypes.WebSite, "http://bob.com"),
-                new Claim(JwtClaimTypes.Address, @"{ 'street_address': 'One Hacker Way', 'locality': 'Heidelberg', 'postal_code': 69118, 'country': 'Germany' }", IdentityServer8.IdentityServerConstants.ClaimValueTypes.Json),
+                new Claim(JwtClaimTypes.Address, @"{ 'street_address': 'One Hacker Way', 'locality': 'Heidelberg', 'postal_code': 69118, 'country': 'Germany' }", IdentityServer10.IdentityServerConstants.ClaimValueTypes.Json),
                 new Claim("location", "somewhere")
             }
         }

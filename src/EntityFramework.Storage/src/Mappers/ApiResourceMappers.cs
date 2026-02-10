@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2024 HigginsSoft, Alexander Higgins - https://github.com/alexhiggins732/ 
+ Copyright (c) 2024 OmarBaruzzo, Omar Baruzzo - https://github.com/omarbaruzzo/ 
 
  Copyright (c) 2018, Brock Allen & Dominick Baier. All rights reserved.
 
@@ -10,9 +10,9 @@
  copies or substantial portions of the Software.
 */
 
-using IdentityServer8.EntityFramework.Entities;
+using IdentityServer10.EntityFramework.Entities;
 
-namespace IdentityServer8.EntityFramework.Mappers
+namespace IdentityServer10.EntityFramework.Mappers
 {
     /// <summary>
     /// Extension methods to map to/from entity/model for API resources.

@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2024 HigginsSoft, Alexander Higgins - https://github.com/alexhiggins732/ 
+ Copyright (c) 2024 OmarBaruzzo, Omar Baruzzo - https://github.com/omarbaruzzo/ 
 
  Copyright (c) 2018, Brock Allen & Dominick Baier. All rights reserved.
 
@@ -11,18 +11,18 @@
 */
 
 using FluentAssertions;
-using IdentityServer8.EntityFramework.DbContexts;
-using IdentityServer8.EntityFramework.Entities;
-using IdentityServer8.EntityFramework.Interfaces;
-using IdentityServer8.EntityFramework.Options;
-using IdentityServer8.EntityFramework.Stores;
-using IdentityServer8.Stores;
-using IdentityServer8.Test;
+using IdentityServer10.EntityFramework.DbContexts;
+using IdentityServer10.EntityFramework.Entities;
+using IdentityServer10.EntityFramework.Interfaces;
+using IdentityServer10.EntityFramework.Options;
+using IdentityServer10.EntityFramework.Stores;
+using IdentityServer10.Stores;
+using IdentityServer10.Test;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Xunit;
 
-namespace IdentityServer8.EntityFramework.IntegrationTests.TokenCleanup;
+namespace IdentityServer10.EntityFramework.IntegrationTests.TokenCleanup;
 
 public class TokenCleanupTests : IntegrationTest<TokenCleanupTests, PersistedGrantDbContext, OperationalStoreOptions>
 {

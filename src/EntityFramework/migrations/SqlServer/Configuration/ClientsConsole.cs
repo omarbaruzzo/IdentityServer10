@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2024 HigginsSoft, Alexander Higgins - https://github.com/alexhiggins732/ 
+ Copyright (c) 2024 OmarBaruzzo, Omar Baruzzo - https://github.com/omarbaruzzo/ 
 
  Copyright (c) 2018, Brock Allen & Dominick Baier. All rights reserved.
 
@@ -11,8 +11,8 @@
 */
 
 using System.Collections.Generic;
-using IdentityServer8;
-using IdentityServer8.Models;
+using IdentityServer10;
+using IdentityServer10.Models;
 
 namespace IdentityServerHost.Configuration;
 

@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2024 HigginsSoft, Alexander Higgins - https://github.com/alexhiggins732/ 
+ Copyright (c) 2024 OmarBaruzzo, Omar Baruzzo - https://github.com/omarbaruzzo/ 
 
  Copyright (c) 2018, Brock Allen & Dominick Baier. All rights reserved.
 
@@ -10,12 +10,12 @@
  copies or substantial portions of the Software.
 */
 
-namespace IdentityServer8.Stores.Serialization;
+namespace IdentityServer10.Stores.Serialization;
 
 /// <summary>
 /// JSON-based persisted grant serializer
 /// </summary>
-/// <seealso cref="IdentityServer8.Stores.Serialization.IPersistentGrantSerializer" />
+/// <seealso cref="IdentityServer10.Stores.Serialization.IPersistentGrantSerializer" />
 public class PersistentGrantSerializer : IPersistentGrantSerializer
 {
     private static readonly JsonSerializerSettings _settings;

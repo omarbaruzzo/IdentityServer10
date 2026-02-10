@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2024 HigginsSoft, Alexander Higgins - https://github.com/alexhiggins732/ 
+ Copyright (c) 2024 OmarBaruzzo, Omar Baruzzo - https://github.com/omarbaruzzo/ 
 
  Copyright (c) 2018, Brock Allen & Dominick Baier. All rights reserved.
 
@@ -12,7 +12,7 @@
 
 #pragma warning disable 1591
 
-namespace IdentityServer8.Stores.Serialization;
+namespace IdentityServer10.Stores.Serialization;
 
 public class ClaimLite
 {

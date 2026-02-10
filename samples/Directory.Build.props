@@ -1,6 +1,6 @@
 <Project>
   <PropertyGroup>
-	<IdentityServerVersion>8.0.4-alpha.2</IdentityServerVersion>
+	<IdentityServerVersion>10.0.0</IdentityServerVersion>
   </PropertyGroup>
   <ImportGroup>
 	 <Import Project="../Directory.Build.props" />
@@ -14,10 +14,10 @@
 	<SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <ItemGroup>
-    <PackageVersion Include="HigginsSoft.IdentityServer8" Version="$(IdentityServerVersion)" />
-	<PackageVersion Include="HigginsSoft.IdentityServer8.Security" Version="$(IdentityServerVersion)" />
-	<PackageVersion Include="HigginsSoft.IdentityServer8.AspNetIdentity" Version="$(IdentityServerVersion)" />
-    <PackageVersion Include="HigginsSoft.IdentityServer8.EntityFramework" Version="$(IdentityServerVersion)" />
+    <PackageVersion Include="OmarBaruzzo.IdentityServer8" Version="$(IdentityServerVersion)" />
+	<PackageVersion Include="OmarBaruzzo.IdentityServer8.Security" Version="$(IdentityServerVersion)" />
+	<PackageVersion Include="OmarBaruzzo.IdentityServer8.AspNetIdentity" Version="$(IdentityServerVersion)" />
+    <PackageVersion Include="OmarBaruzzo.IdentityServer8.EntityFramework" Version="$(IdentityServerVersion)" />
   </ItemGroup> 
   <ItemGroup>
     <PackageReference Include="IdentityModel.OidcClient" />
@@ -29,7 +29,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Server.Kestrel" />
     <PackageReference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect" />
 	<PackageReference Include="Microsoft.Extensions.DependencyInjection" />
-    <PackageReference Include="SeriLog" />
+    <PackageReference Include="Serilog" />
     <PackageReference Include="Serilog.AspNetCore" />
     <PackageReference Include="Serilog.Extensions.Logging" />
     <PackageReference Include="Serilog.Sinks.Console" />

@@ -297,3 +297,5 @@ __pycache__/
 /shared/nginx/certs/
 lib/
 
+src/nuget/
+src/nuget/OmarBaruzzo.IdentityServer10.10.0.0.snupkg

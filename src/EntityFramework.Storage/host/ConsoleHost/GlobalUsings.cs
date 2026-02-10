@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2024 HigginsSoft, Alexander Higgins - https://github.com/alexhiggins732/ 
+ Copyright (c) 2024 OmarBaruzzo, Omar Baruzzo - https://github.com/omarbaruzzo/ 
 
  Copyright (c) 2018, Brock Allen & Dominick Baier. All rights reserved.
 
@@ -10,8 +10,8 @@
  copies or substantial portions of the Software.
 */
 
-global using IdentityServer8.EntityFramework;
-global using IdentityServer8.EntityFramework.Storage;
+global using IdentityServer10.EntityFramework;
+global using IdentityServer10.EntityFramework.Storage;
 global using Microsoft.EntityFrameworkCore;
 global using Microsoft.Extensions.DependencyInjection;
 global using Microsoft.Extensions.Logging;

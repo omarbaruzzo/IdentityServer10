@@ -6,12 +6,12 @@ Welcome to IdentityServer8 (latest)
 
 IdentityServer8 is an OpenID Connect and OAuth 2.0 framework for ASP.NET DotNet 8.
 
-Browse the latest `IdentityServer8 source code onGitHub <https://github.com/alexhiggins732/IdentityServer8>`_ or download the `latest IdentyServer8 packages <https://www.nuget.org/packages/HigginsSoft.IdentityServer8//>`_ on NuGet.
+Browse the latest `IdentityServer8 source code onGitHub <https://github.com/omarbaruzzo/IdentityServer8>`_ or download the `latest IdentyServer8 packages <https://www.nuget.org/packages/OmarBaruzzo.IdentityServer8//>`_ on NuGet.
 
 .. warning:: 
    This is a revival of the archived IdentityServer4 project which started a new `company <https://duendesoftware.com/>`_ as of Oct, 1st 2020. 
    The new Duende IdentityServer is not longer free open source, but now has various commercial licenses and paid upgrade package.
-   IdentityServer8 and dependenices have been upgraded to DotNet 8 and will be maintained by HigginsSoft, Alexander Higgins and the community as an Open Source project. 
+   IdentityServer8 and dependenices have been upgraded to DotNet 8 and will be maintained by OmarBaruzzo, Omar Baruzzo and the community as an Open Source project. 
 
 .. note:: This docs cover the latest version on main branch. This might not be released yet. Use the version picker in the lower left corner to select docs for a specific version.
 

@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2024 HigginsSoft, Alexander Higgins - https://github.com/alexhiggins732/ 
+ Copyright (c) 2024 OmarBaruzzo, Omar Baruzzo - https://github.com/omarbaruzzo/ 
 
  Copyright (c) 2018, Brock Allen & Dominick Baier. All rights reserved.
 
@@ -11,16 +11,16 @@
 */
 
 using FluentAssertions;
-using IdentityServer8.EntityFramework.DbContexts;
-using IdentityServer8.EntityFramework.Mappers;
-using IdentityServer8.EntityFramework.Options;
-using IdentityServer8.EntityFramework.Stores;
-using IdentityServer8.Models;
-using IdentityServer8.Stores;
+using IdentityServer10.EntityFramework.DbContexts;
+using IdentityServer10.EntityFramework.Mappers;
+using IdentityServer10.EntityFramework.Options;
+using IdentityServer10.EntityFramework.Stores;
+using IdentityServer10.Models;
+using IdentityServer10.Stores;
 using Microsoft.EntityFrameworkCore;
 using Xunit;
 
-namespace IdentityServer8.EntityFramework.IntegrationTests.Stores;
+namespace IdentityServer10.EntityFramework.IntegrationTests.Stores;
 
 public class PersistedGrantStoreTests : IntegrationTest<PersistedGrantStoreTests, PersistedGrantDbContext, OperationalStoreOptions>
 {
@@ -114,6 +114,7 @@ public class PersistedGrantStoreTests : IntegrationTest<PersistedGrantStoreTests
     {
         using (var context = new PersistedGrantDbContext(options, StoreOptions))
         {
+            context.PersistedGrants.RemoveRange(context.PersistedGrants.ToArray());
             context.PersistedGrants.Add(CreateTestObject(sub: "sub1", clientId: "c1", sid: "s1", type: "t1").ToEntity());
             context.PersistedGrants.Add(CreateTestObject(sub: "sub1", clientId: "c1", sid: "s1", type: "t2").ToEntity());
             context.PersistedGrants.Add(CreateTestObject(sub: "sub1", clientId: "c1", sid: "s2", type: "t1").ToEntity());

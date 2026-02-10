@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2024 HigginsSoft, Alexander Higgins - https://github.com/alexhiggins732/ 
+ Copyright (c) 2024 OmarBaruzzo, Omar Baruzzo - https://github.com/omarbaruzzo/ 
 
  Copyright (c) 2018, Brock Allen & Dominick Baier. All rights reserved.
 
@@ -11,12 +11,12 @@
 */
 
 global using IdentityModel;
-global using IdentityServer8;
-global using IdentityServer8.AspNetIdentity;
-global using IdentityServer8.Extensions;
-global using IdentityServer8.Models;
-global using IdentityServer8.Services;
-global using IdentityServer8.Validation;
+global using IdentityServer10;
+global using IdentityServer10.AspNetIdentity;
+global using IdentityServer10.Extensions;
+global using IdentityServer10.Models;
+global using IdentityServer10.Services;
+global using IdentityServer10.Validation;
 global using Microsoft.AspNetCore.Authentication.Cookies;
 global using Microsoft.AspNetCore.Identity;
 global using Microsoft.Extensions.Logging;

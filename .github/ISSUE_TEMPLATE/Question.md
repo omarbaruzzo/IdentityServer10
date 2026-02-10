@@ -1,6 +1,8 @@
 <!--
   ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️
-Questions are community supported only and the authors/maintainers may or may not have time to reply. If you or your company would like commercial support, please see [here](https://identityserver8.readthedocs.io/en/latest/intro/support.html#commercial-support) for more information.
+Questions for IdentityServer10 are community supported only and the maintainer may or may not have time to reply.
+If you or your company would like commercial support, please contact the maintainer of this repository directly
+via the GitHub profile or any contact information linked from the project homepage.
   ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️
 -->
 

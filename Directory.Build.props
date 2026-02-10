@@ -1,33 +1,37 @@
 <Project>
+    <!-- Disabilita il workload resolver per evitare MSB4276 (directory WorkloadAutoImportPropsLocator mancanti in alcuni SDK 10) -->
+    <PropertyGroup>
+        <MSBuildEnableWorkloadResolver>false</MSBuildEnableWorkloadResolver>
+    </PropertyGroup>
 
     <PropertyGroup>
-        <TargetFramework>net8.0</TargetFramework>
+        <TargetFramework>net10.0</TargetFramework>
         <!--always bump /version.json and /docs/conf.py to <Version>X.Y.Z</Version>to keep nuget, build and document versions in sync-->
-        <Version>8.0.4</Version>
-		<IdentityServerVersion>8.0.4</IdentityServerVersion>
-        <PackageId>HigginsSoft.$(MSBuildProjectName)</PackageId>
+        <Version>10.0.0</Version>
+		<IdentityServerVersion>10.0.0</IdentityServerVersion>
+        <PackageId>OmarBaruzzo.$(MSBuildProjectName)</PackageId>
         <Title>$(MSBuildProjectName)</Title>
         <ImplicitUsings>enable</ImplicitUsings>
 
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
 
         <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-        <NoWarn>$(NoWarn);CS0618;SYSLIB0023;SYSLIB0020;EF1001</NoWarn>
+        <NoWarn>$(NoWarn);CS0618;CS8632;SYSLIB0023;SYSLIB0020;SYSLIB0057;EF1001;ASPDEPR004;ASPDEPR008</NoWarn>
 
 		<SignAssembly>true</SignAssembly>
 		<AssemblyOriginatorKeyFile>$(SolutionDir)../key.snk</AssemblyOriginatorKeyFile>
 
 
         <Description>OpenID Connect and OAuth 2.0 Framework for ASP.NET Core</Description>
-        <Copyright>Copyright 2024 HigginsSoft. Alexander Higgins</Copyright>
-        <Authors>HigginsSoft, Alexander Higgins, Brock Allen, Dominick Baier</Authors>
+        <Copyright>Copyright 2026 Omar Baruzzo. Omar Baruzzo</Copyright>
+        <Authors>Omar Baruzzo, Omar Baruzzo, Brock Allen, Dominick Baier</Authors>
   
-        <PackageTags>OAuth2 OAuth 2.0 OpenID Connect Security Identity IdentityServer Admin IdentityServer8 OpenIDConnect </PackageTags>
+        <PackageTags>OAuth2 OAuth 2.0 OpenID Connect Security Identity IdentityServer Admin IdentityServer10 OpenIDConnect </PackageTags>
 
 
-        <PackageProjectUrl>https://github.com/alexhiggins732/IdentityServer8</PackageProjectUrl>
+        <PackageProjectUrl>https://github.com/omarbaruzzo/IdentityServer10</PackageProjectUrl>
         <RepositoryType>git</RepositoryType>
-        <PackageReleaseNotes>https://github.com/alexhiggins732/IdentityServer8/releases</PackageReleaseNotes>
+        <PackageReleaseNotes>https://github.com/omarbaruzzo/IdentityServer10/releases</PackageReleaseNotes>
 
         <!-- Declare that the Repository URL can be published to NuSpec -->
         <PublishRepositoryUrl>true</PublishRepositoryUrl>
@@ -42,7 +46,7 @@
 
         <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
 
-        <!--<CodeAnalysisRuleset>$(MSBuildThisFileDirectory)IdentityServer8.DotNet.ruleset</CodeAnalysisRuleset>-->
+        <!--<CodeAnalysisRuleset>$(MSBuildThisFileDirectory)IdentityServer10.DotNet.ruleset</CodeAnalysisRuleset>-->
 
         <IsTrimmable>false</IsTrimmable>
         <EnableAOTAnalyzer>false</EnableAOTAnalyzer>
