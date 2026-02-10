@@ -1,7 +1,10 @@
-# IdentityServer8.EntityFramework
+# IdentityServer10.EntityFramework
 
-IdentityServer8.EntityFramework is a package that provides the configuration APIs to add persistence for IdentityServer 4 configuration data that uses EntityFramework as its database abstraction.
+`IdentityServer10.EntityFramework` provides the Entity Framework–based persistence layer for IdentityServer10 configuration data.
+
+Historically this package was named `IdentityServer8.EntityFramework` and targeted the IdentityServer8 line; it has since been migrated and aligned with **IdentityServer10** on .NET 10.
 
 ## Issues
 
-For issues, use the [consolidated IdentityServer8 issue tracker](https://github.com/omarbaruzzo/IdentityServer8/issues).
+For issues related to this package, please use the IdentityServer10 issue tracker:  
+<https://github.com/omarbaruzzo/IdentityServer10/issues>

@@ -1,118 +1,118 @@
-# Migrazione IdentityServer8: .NET 8 → .NET 10
+# Migration IdentityServer10: .NET 8 → .NET 10
 
-Riepilogo dei file e delle modifiche applicate per portare il progetto su .NET 10.
+Summary of the files and changes applied to move the project to .NET 10 and version **10.0.0**.
 
-## Workaround build (applicato)
+## Build workaround (applied)
 
-- **Workload resolver**: in `Directory.Build.props` è impostato `MSBuildEnableWorkloadResolver=false` per evitare l’errore MSB4276 (directory WorkloadAutoImportPropsLocator mancanti in alcuni installazioni dell’SDK 10).
-- **Pacchetti**: aggiornate le versioni in `Directory.Packages.props` a quelle compatibili con .NET 10 (ASP.NET 10.0.2, EF 10.0.2, Swashbuckle 10.0.0, Microsoft.NET.Test.Sdk 18.0.1, coverlet 6.0.2, Pomelo EF MySql 8.0.2, Aspire/ServiceDiscovery 10.2.0).
+- **Workload resolver**: in `Directory.Build.props` the property `MSBuildEnableWorkloadResolver=false` is set to avoid MSB4276 (missing `WorkloadAutoImportPropsLocator` directories on some SDK 10 installations).
+- **Packages**: versions in `Directory.Packages.props` have been updated to .NET 10–compatible values (ASP.NET 10.0.2, EF 10.0.2, Swashbuckle 10.0.0, Microsoft.NET.Test.Sdk 18.0.1, coverlet 6.0.2, Pomelo EF MySql 8.0.2, Aspire/ServiceDiscovery 10.2.0, etc.).
 
 ---
 
-## 1. Build e target framework (obbligatori)
+## 1. Build and target framework (required)
 
 ### `Directory.Build.props` (root)
-- **Riga 4:** `<TargetFramework>net8.0</TargetFramework>` → `<TargetFramework>net10.0</TargetFramework>`
-- **Righe 6-7:** Aggiornare se vuoi allineare la versione del prodotto (es. `10.0.0`):
-  - `<Version>8.0.4</Version>` → `<Version>10.0.0</Version>`
-  - `<IdentityServerVersion>8.0.4</IdentityServerVersion>` → `<IdentityServerVersion>10.0.0</IdentityServerVersion>`
+- Change `<TargetFramework>net8.0</TargetFramework>` → `<TargetFramework>net10.0</TargetFramework>`.
+- Optionally align product/version metadata (here already set for IdentityServer10):
+  - `<Version>10.0.0</Version>`
+  - `<IdentityServerVersion>10.0.0</IdentityServerVersion>`
 
 ### `Directory.Build.targets` (root)
-- **Riga 11:** `Condition="'%(TargetFramework)' == 'net8.0'"` → `Condition="'%(TargetFramework)' == 'net10.0'"`
-- **Commento righe 2-5:** Puoi aggiornare il TODO da ".NET 8" a ".NET 10" (il workaround ILLink potrebbe essere ancora necessario).
+- Update conditions like `Condition="'%(TargetFramework)' == 'net8.0'"` → `Condition="'%(TargetFramework)' == 'net10.0'"`.
+- If there are comments mentioning “.NET 8”, update them to “.NET 10” where appropriate (the ILLink workaround may still be needed).
 
 ---
 
-## 2. SDK e global.json (obbligatorio)
+## 2. SDK and `global.json` (required)
 
 ### `global.json`
-- **Riga 3:** `"version":"8.0.408"` → `"version":"10.0.102"` (o l’ultima 10.0.x disponibile sul tuo ambiente).
+- Ensure SDK 10 is referenced, for example: `"version": "10.0.102"` (or the latest 10.0.x installed on your environment).
 
 ---
 
-## 3. Versioni pacchetti centralizzate (obbligatorio)
+## 3. Central package versions (required)
 
 ### `Directory.Packages.props`
-Aggiornare le variabili di versione per .NET 10:
+Update the version variables for .NET 10:
 
-| Variabile | Da | A |
-|-----------|----|---|
-| `AspnetVersion` | 8.0.0 | 10.0.0 |
-| `AspnetMinorVersion` | 8.0.1 | 10.0.x (es. 10.0.1) |
-| `MicrosoftExtensionsVersion` | 8.0.0 | 10.0.0 |
-| `EfVersion` | 8.0.0 | 10.0.0 |
-| `RuntimeVersion` | 8.0.0 | 10.0.0 |
-| `AspireVersion` | 8.0.0-preview.2... | 10.0.0-preview.x (quando disponibile) |
+| Variable                  | From   | To        |
+|---------------------------|--------|-----------|
+| `AspnetVersion`          | 8.0.0  | 10.0.0+   |
+| `AspnetMinorVersion`     | 8.0.1  | 10.0.x    |
+| `MicrosoftExtensionsVersion` | 8.0.0 | 10.0.0+ |
+| `EfVersion`              | 8.0.0  | 10.0.0+   |
+| `RuntimeVersion`         | 8.0.0  | 10.0.0    |
+| `AspireVersion`          | 8.0.0-preview.* | 10.0.0-preview.* (when available) |
 
-Controllare anche i pacchetti con versione hardcoded 8.0.x, ad esempio:
-- `Microsoft.AspNetCore.Authentication.OpenIdConnect` Version="8.0.0"
-- `Microsoft.AspNetCore.TestHost` Version="8.0.1"
-- `Microsoft.EntityFrameworkCore.Design` Version="8.0.1"
-- `Microsoft.Extensions.DependencyInjection` / `Abstractions` / `Logging.Abstractions` Version="8.0.0"
+Also review any hard‑coded 8.0.x versions and bump them to 10.0.x (or to the appropriate central variable), for example:
 
-Portarli a 10.0.x (o alla variabile centralizzata se già presente).
-
----
-
-## 4. GitHub Actions (obbligatorio se usi CI)
-
-In tutti i workflow in `.github/workflows/` che usano `setup-dotnet`:
-
-- **File:** `develop.yml`, `master.yml`, `release.yml`, `pre-release.yml`
-- **Modifica:** `dotnet-version: 8.0.x` → `dotnet-version: 10.0.x`
+- `Microsoft.AspNetCore.Authentication.OpenIdConnect`
+- `Microsoft.AspNetCore.TestHost`
+- `Microsoft.EntityFrameworkCore.Design`
+- `Microsoft.Extensions.DependencyInjection` / `Abstractions` / `Logging.Abstractions`
 
 ---
 
-## 5. Samples (consigliato)
+## 4. GitHub Actions (required if you use CI)
+
+For all workflows in `.github/workflows/` that use `setup-dotnet`:
+
+- Files: `develop.yml`, `master.yml`, `release.yml`, `pre-release.yml`
+- Change `dotnet-version: 8.0.x` → `dotnet-version: 10.0.x`
+
+---
+
+## 5. Samples (recommended)
 
 ### `samples/Directory.Build.props`
-- **Riga 3:** `<IdentityServerVersion>8.0.4-alpha.2</IdentityServerVersion>` → `<IdentityServerVersion>10.0.0</IdentityServerVersion>` (o la versione che usi dopo la migrazione).
+- Update the sample identity server version, for example:  
+  `<IdentityServerVersion>10.0.0</IdentityServerVersion>`
 
 ---
 
-## 6. Documentazione e README (opzionale)
+## 6. Documentation and READMEs (optional but recommended)
 
-- **`docs/conf.py`** (righe 72-74): `version = '8.0.0'`, `release = '8.0.4'` → aggiornare a 10.0.x.
-- **`docs/index.rst`**: Testi che citano "DotNet 8" → "DotNet 10".
-- **`README.md`** e **`src/README.md`**: Riferimenti a ".NET 8", "8.0.4", "latest .NET 8 SDK" → ".NET 10", "10.0.x", "latest .NET 10 SDK".
+- **`docs/conf.py`**: update `version` and `release` from 8.x values to 10.x (e.g. `version = '10.0.0'`, `release = '10.0.0'`).
+- **`docs/index.rst`**: update any text that mentions “.NET 8” to “.NET 10”.
+- **`README.md`** and **`src/README.md`**: replace references to “.NET 8”, “8.0.4”, and “latest .NET 8 SDK” with `.NET 10`, `10.0.0`, and “latest .NET 10 SDK” where they refer to the current IdentityServer10 line (keep IdentityServer8 references clearly marked as historical).
 
 ---
 
-## 7. Connection string e database (opzionale)
+## 7. Connection strings and databases (optional)
 
-I nomi database nelle connection string contengono "8.0.0"; puoi lasciarli o allinearli alla nuova versione:
+Database names in connection strings may still contain `8.0.0`. You can leave them as‑is or align them to the new version, for example:
 
-- `src/EntityFramework.Storage/host/ConsoleHost/Program.cs`: `IdentityServer8.EntityFramework-8.0.0` → eventualmente `...-10.0.0`
+- `src/EntityFramework.Storage/host/ConsoleHost/Program.cs`: `IdentityServer8.EntityFramework-8.0.0` → `IdentityServer10.EntityFramework-10.0.0`
 - `src/EntityFramework/migrations/SqlServer/appsettings.json`
 - `src/EntityFramework.Storage/migrations/SqlServer/appsettings.json`
 - `src/AspNetIdentity/migrations/SqlServer/appsettings.json`
 - `src/AspNetIdentity/host/appsettings.json`
 
-Se li cambi, ricordati di creare/aggiornare il database di sviluppo (es. migrazioni o nuovo DB).
+If you rename databases, remember to create or migrate the corresponding development databases.
 
 ---
 
-## 8. Nessun override per target nei .csproj
+## 8. No per-project `TargetFramework` overrides
 
-I `.csproj` non definiscono `TargetFramework` in modo esplicito: ereditano da `Directory.Build.props`. Non serve toccare i singoli progetti per il solo cambio di framework.
+`.csproj` files do not explicitly define `TargetFramework`; they inherit from `Directory.Build.props`. You generally do **not** need to touch individual projects just to change the framework version.
 
 ---
 
-## Ordine consigliato
+## Recommended migration order
 
-1. `Directory.Build.props` (TargetFramework + eventuale Version/IdentityServerVersion).
-2. `Directory.Build.targets` (condizione `net10.0`).
-3. `global.json` (SDK 10.0.x).
-4. `Directory.Packages.props` (tutte le variabili e i pacchetti 8.0.x → 10.0.x).
-5. Workflow in `.github/workflows/`.
+1. `Directory.Build.props` (update `TargetFramework`, `Version`, `IdentityServerVersion`).
+2. `Directory.Build.targets` (adjust conditions to `net10.0`).
+3. `global.json` (point to an SDK 10.0.x).
+4. `Directory.Packages.props` (bump all remaining 8.0.x packages to 10.0.x where required).
+5. Workflows in `.github/workflows/`.
 6. `samples/Directory.Build.props`.
-7. Eseguire `dotnet restore` e `dotnet build` dalla root (es. `src/IdentityServer8.sln`) e correggere eventuali errori di compatibilità o breaking change .NET 10.
-8. Documentazione e connection string se vuoi allineare anche quelli.
+7. Run `dotnet restore` and `dotnet build` from the root (e.g. `src/IdentityServer10.sln`) and fix any .NET 10 compatibility or breaking changes as they appear.
+8. Update documentation and connection strings if you want them to reflect the new versioning.
 
 ---
 
-## Note
+## Notes
 
-- **.NET 10** è LTS (supporto fino a novembre 2028). Assicurati di avere l’SDK 10.x installato (`dotnet --list-sdks`).
-- Dopo il cambio, verifica eventuali **breaking change** in ASP.NET Core 10 e Entity Framework Core 10 (documentazione Microsoft).
-- Il workaround in `Directory.Build.targets` per ILLink/netstandard2.1 potrebbe restare necessario; in caso di problemi di trimming, tieni il target `netstandard2.1` nel `KnownILLinkPack` e la condizione su `net10.0`.
+- **.NET 10** is LTS (support until November 2028). Make sure you have an SDK 10.x installed (`dotnet --list-sdks`).
+- After upgrading, review the official ASP.NET Core 10 and Entity Framework Core 10 breaking changes documentation.
+- The ILLink/netstandard2.1 workaround in `Directory.Build.targets` might still be required; if you rely on trimming, keep the `netstandard2.1` entries in `KnownILLinkPack` and the `net10.0` condition in place.
