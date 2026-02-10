@@ -3,9 +3,9 @@
   <ItemGroup>
     <PackageReference Include="jQuery" />
     <PackageReference Include="jQuery.validation" />
-    <PackageReference Include="OmarBaruzzo.IdentityServer8" />
-    <PackageReference Include="OmarBaruzzo.IdentityServer8.AspnetIdentity" />
-     <PackageReference Include="OmarBaruzzo.IdentityServer8.Security" />
+    <PackageReference Include="OmarBaruzzo.IdentityServer10" />
+    <PackageReference Include="OmarBaruzzo.IdentityServer10.AspNetIdentity" />
+    <PackageReference Include="OmarBaruzzo.IdentityServer10.Security" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" />
     <PackageReference Include="Microsoft.Web.LibraryManager.Build" />
 
