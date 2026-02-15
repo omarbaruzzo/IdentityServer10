@@ -7,8 +7,9 @@ This project started as a technical fork of the community project **IdentityServ
 - a target framework of **.NET 10**,
 - updated security‑critical dependencies,
 - refreshed build and test infrastructure.
+- **MySQL / MariaDB:** [Pomelo.EntityFrameworkCore.MySql](https://github.com/PomeloFoundation/Pomelo.EntityFrameworkCore.MySql) **9.0.0** for Entity Framework Core–backed persistence (compatible with EF Core 10).
 
-**Current stable version:** `10.0.0`  
+**Current stable version:** `10.0.1`  
 **GitHub repository:** <https://github.com/omarbaruzzo/IdentityServer10>
 
 IdentityServer10 is **not** an official project of Duende, IdentityServer4 or IdentityServer8. It is a separate, protocol‑compatible implementation (OpenID Connect + OAuth 2.0) maintained independently.
