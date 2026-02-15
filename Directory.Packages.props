@@ -5,7 +5,7 @@
     <AspnetVersion>10.0.2</AspnetVersion>
     <AspnetMinorVersion>10.0.2</AspnetMinorVersion>
     <MicrosoftExtensionsVersion>10.0.2</MicrosoftExtensionsVersion>
-    <EfVersion>9.0.0</EfVersion>
+    <EfVersion>10.0.2</EfVersion>
     <RuntimeVersion>10.0.0</RuntimeVersion>
     <AspireVersion>10.2.0</AspireVersion>
     <GrpcVersion>2.59.0</GrpcVersion>
@@ -131,7 +131,7 @@
     <PackageVersion Include="Persante.Identity.Iam.Blazor" Version="1.1.24-alpha.5" />
     <PackageVersion Include="Persante.Logging" Version="1.0.8" />
     <PackageVersion Include="Persante.Security.Authentication" Version="1.1.26-alpha.3" />
-    <PackageVersion Include="Pomelo.EntityFrameworkCore.MySql" Version="8.0.2" />
+    <PackageVersion Include="Pomelo.EntityFrameworkCore.MySql" Version="9.0.0" />
     <PackageVersion Include="Pomelo.EntityFrameworkCore.MySql.Design" Version="1.1.2" />
     <PackageVersion Include="protobuf-net" Version="3.2.26" />
     <PackageVersion Include="protobuf-net.BuildTools" Version="3.2.27" />
