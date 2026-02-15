@@ -5,7 +5,7 @@
     <AspnetVersion>10.0.2</AspnetVersion>
     <AspnetMinorVersion>10.0.2</AspnetMinorVersion>
     <MicrosoftExtensionsVersion>10.0.2</MicrosoftExtensionsVersion>
-    <EfVersion>10.0.2</EfVersion>
+    <EfVersion>9.0.0</EfVersion>
     <RuntimeVersion>10.0.0</RuntimeVersion>
     <AspireVersion>10.2.0</AspireVersion>
     <GrpcVersion>2.59.0</GrpcVersion>
@@ -74,15 +74,15 @@
     <PackageVersion Include="Microsoft.AspNetCore.TestHost" Version="$(AspnetMinorVersion)" />
     <PackageVersion Include="Microsoft.AspNetCore.Server.Kestrel" Version="2.2.0" />
     <PackageVersion Include="Microsoft.Data.SqlClient" Version="6.1.1" />
-    <PackageVersion Include="Microsoft.EntityFrameworkCore.Design" Version="$(AspnetMinorVersion)">
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.Design" Version="$(EfVersion)">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageVersion>
-    <PackageVersion Include="Microsoft.EntityFrameworkCore.InMemory" Version="$(AspnetVersion)" />
-    <PackageVersion Include="Microsoft.EntityFrameworkCore.Relational" Version="$(AspnetMinorVersion)" />
-    <PackageVersion Include="Microsoft.EntityFrameworkCore.Sqlite" Version="$(AspnetMinorVersion)" />
-    <PackageVersion Include="Microsoft.EntityFrameworkCore.SqlServer" Version="$(AspnetMinorVersion)" />
-    <PackageVersion Include="Microsoft.EntityFrameworkCore.Tools" Version="$(AspnetMinorVersion)">
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.InMemory" Version="$(EfVersion)" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.Relational" Version="$(EfVersion)" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.Sqlite" Version="$(EfVersion)" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.SqlServer" Version="$(EfVersion)" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.Tools" Version="$(EfVersion)">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageVersion>
