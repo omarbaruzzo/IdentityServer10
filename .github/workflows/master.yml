@@ -61,8 +61,11 @@ jobs:
 
     - name: Restore dependencies
       run: dotnet restore src/IdentityServer10.sln
+    # The <Version> in Directory.Build.props is the source of truth for the package version.
+    # Do NOT override it via -p:Version=... from nbgv: if nbgv returns empty/0.0.0 the build
+    # silently produces 0.0.0 packages and the Push step uploads junk to nuget.org.
     - name: Build
-      run: dotnet build src/IdentityServer10.sln --configuration Release --no-restore -p:Version=${{ steps.nbgv.outputs.SimpleVersion }}
+      run: dotnet build src/IdentityServer10.sln --configuration Release --no-restore
     - name: Test
       run: dotnet test src/IdentityServer10.sln --configuration Release --no-build --verbosity normal /p:CollectCoverage=true --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=cobertura
 
@@ -72,6 +75,20 @@ jobs:
         token: ${{ secrets.CODECOV_TOKEN }}
         slug: omarbaruzzo/IdentityServer10
         CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+
+    # Safety net: refuse to push if any 0.0.0 / 1.0.0 placeholder nupkg slipped through,
+    # so we never publish junk like OmarBaruzzo.IdentityServer10.0.0.0.nupkg to nuget.org again.
+    - name: Verify package versions before push
+      if: ${{ (github.event_name == 'push') && (runner.os == 'Windows') }}
+      shell: pwsh
+      run: |
+        $bad = Get-ChildItem -Path .\nuget -Filter *.nupkg -ErrorAction SilentlyContinue |
+               Where-Object { $_.Name -match '\.(0\.0\.0|1\.0\.0)\.nupkg$' }
+        if ($bad) {
+          Write-Error "Found placeholder-versioned packages, refusing to push:`n$($bad.FullName -join "`n")"
+          exit 1
+        }
+        Write-Host "All .nupkg in .\nuget look properly versioned."
 
     - name: Push
       if: ${{ (github.event_name == 'push') && (runner.os == 'Windows') }} 

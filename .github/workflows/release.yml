@@ -64,8 +64,11 @@ jobs:
 
     - name: Restore dependencies
       run: dotnet restore src/IdentityServer10.sln
+    # The <Version> in Directory.Build.props is the source of truth for the package version.
+    # Do NOT override it via -p:Version=... from nbgv: if nbgv returns empty/0.0.0 the build
+    # silently produces 0.0.0 packages.
     - name: Build
-      run: dotnet build src/IdentityServer10.sln --configuration Release --no-restore -p:Version=${{ steps.nbgv.outputs.SemVer2 }}
+      run: dotnet build src/IdentityServer10.sln --configuration Release --no-restore
     - name: Test
       run: dotnet test src/IdentityServer10.sln --configuration Release --no-build --verbosity normal /p:CollectCoverage=true --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=cobertura
 
