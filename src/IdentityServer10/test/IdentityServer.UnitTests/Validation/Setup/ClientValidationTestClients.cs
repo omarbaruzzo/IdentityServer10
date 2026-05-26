@@ -210,7 +210,7 @@ namespace IdentityServer.UnitTests.Validation.Setup
                         {
                             Type = SecretTypes.X509CertificateName
                         },
-                        new Secret("4B5FE072C7AD8A9B5DCFDD1A20608BB54DE0954F", "mtls.test")
+                        new Secret(TestCert.Load().Thumbprint, "mtls.test")
                         {
                             Type = SecretTypes.X509CertificateThumbprint
                         },

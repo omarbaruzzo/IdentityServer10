@@ -75,5 +75,5 @@ jobs:
 
     - name: Push
       if: ${{ (github.event_name == 'push') && (runner.os == 'Windows') }} 
-      run: dotnet nuget push .\nuget\*.nupkg  --skip-duplicate --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_API_KEY }}
+      run: dotnet nuget push .\nuget\*.nupkg  --skip-duplicate --source https://www.nuget.org/api/v2/package --api-key ${{ secrets.NUGET_API_KEY }}
 
