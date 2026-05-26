@@ -6,7 +6,7 @@ For the top‑level project overview, see the root `README.md` or the GitHub rep
 <https://github.com/omarbaruzzo/IdentityServer10>
 
 ---
-
+ 
 ## (Historical) Identity Server 8 update
 This section documents the original .NET 8 revival of the IdentityServer4 and IdentityServer4 Admin UI for OpenID Connect (OIDC) and OAuth, which was archived when .NET Core 3.1 reached end of support.
 

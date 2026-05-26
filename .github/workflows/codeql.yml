@@ -12,36 +12,24 @@
 name: "CodeQL"
 
 on:
+  workflow_dispatch:
   push:
     branches: [ "master", "develop", "release/*" ]
     paths-ignore:
     - '**/README.md'
-    - '**/docs'
-    - '.github/**'
-    - "docs/**"
-    - ".git/*"
-    - ".vs/*"
-    - ".config/*"
-    - ".github/*"
-    - "Directory.Build.props"
-    - "Directory.Build.targets"
-    - "Directory.Build.props"
-    - "docker-compose.yml"
-    - "docker-compose.override.yml"
-    - "docker-compose.vs.debug.yml"
-    - "docker-compose.vs.release.yml"
-    - "docker-compose.dcrpoj"
-    - "**/*.sln"
-    - "global.json"
-    - "IdentityServer8.DotNet.ruleset"
-    - "LICENSCE"
-    - "version.json"
-    - "Nuget.config"
-    - "SECURITY.md"
-    - "SPONSORS.md"
-    - "README.md"
-    - "samples"
-    - "nuget"
+    - 'docs/**'
+    - '.git/**'
+    - '.vs/**'
+    - '.config/**'
+    - 'docker-compose.yml'
+    - 'docker-compose.override.yml'
+    - 'docker-compose.vs.debug.yml'
+    - 'docker-compose.vs.release.yml'
+    - 'docker-compose.dcrpoj'
+    - 'version.json'
+    - 'Nuget.config'
+    - 'SECURITY.md'
+    - 'SPONSORS.md'
   pull_request:
     branches: [ "master", "develop", "release/*" ]
 
@@ -105,10 +93,10 @@ jobs:
 
     - name: Restore dependencies
       if: ${{ (matrix.language == 'csharp') }} 
-      run: dotnet restore src/IdentityServer8.sln
+      run: dotnet restore src/IdentityServer10.sln
     - name: Build
       if: ${{ (matrix.language == 'csharp') }} 
-      run: dotnet build src/IdentityServer8.sln --configuration Release --no-restore
+      run: dotnet build src/IdentityServer10.sln --configuration Release --no-restore
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
