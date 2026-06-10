@@ -21,7 +21,7 @@
     <PackageVersion Include="AspNetCore.HealthChecks.OpenIdConnectServer" Version="$(AspnetVersion)" />
     <PackageVersion Include="AspNetCore.HealthChecks.SqlServer" Version="$(AspnetVersion)" />
     <PackageVersion Include="AspNetCore.HealthChecks.UI.Client" Version="$(AspnetVersion)" />
-    <PackageVersion Include="AutoMapper" Version="16.1.1" />
+    <PackageVersion Include="Mapster" Version="10.0.7" />
     <PackageVersion Include="Azure.Extensions.AspNetCore.DataProtection.Keys" Version="1.1.0" />
     <PackageVersion Include="Azure.Identity" Version="1.14.2" />
     <PackageVersion Include="Azure.Security.KeyVault.Certificates" Version="4.2.0" />

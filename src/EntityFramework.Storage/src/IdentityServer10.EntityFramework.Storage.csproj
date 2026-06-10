@@ -12,7 +12,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="AutoMapper" />
+        <PackageReference Include="Mapster" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" />
     </ItemGroup>
 

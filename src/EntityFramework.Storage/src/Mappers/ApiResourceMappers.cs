@@ -11,7 +11,6 @@
 */
 
 using IdentityServer10.EntityFramework.Entities;
-using Microsoft.Extensions.Logging.Abstractions;
 
 namespace IdentityServer10.EntityFramework.Mappers
 {
@@ -22,13 +21,11 @@ namespace IdentityServer10.EntityFramework.Mappers
     {
         static ApiResourceMappers()
         {
-            Mapper = new MapperConfiguration(
-                    cfg => cfg.AddProfile<ApiResourceMapperProfile>(),
-                    NullLoggerFactory.Instance)
-                .CreateMapper();
+            Config = new TypeAdapterConfig();
+            Config.Apply(new ApiResourceMapperProfile());
         }
 
-        internal static IMapper Mapper { get; }
+        internal static TypeAdapterConfig Config { get; }
 
         /// <summary>
         /// Maps an entity to a model.
@@ -37,7 +34,7 @@ namespace IdentityServer10.EntityFramework.Mappers
         /// <returns></returns>
         public static Models.ApiResource ToModel(this ApiResource entity)
         {
-            return entity == null ? null : Mapper.Map<Models.ApiResource>(entity);
+            return entity == null ? null : entity.Adapt<Models.ApiResource>(Config);
         }
 
         /// <summary>
@@ -47,7 +44,7 @@ namespace IdentityServer10.EntityFramework.Mappers
         /// <returns></returns>
         public static ApiResource ToEntity(this Models.ApiResource model)
         {
-            return model == null ? null : Mapper.Map<ApiResource>(model);
+            return model == null ? null : model.Adapt<ApiResource>(Config);
         }
     }
 }

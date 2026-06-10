@@ -15,25 +15,30 @@ namespace IdentityServer10.EntityFramework.Mappers
     /// <summary>
     /// Defines entity/model mapping for identity resources.
     /// </summary>
-    /// <seealso cref="AutoMapper.Profile" />
-    public class IdentityResourceMapperProfile : Profile
+    /// <seealso cref="Mapster.IRegister" />
+    public class IdentityResourceMapperProfile : IRegister
     {
         /// <summary>
-        /// <see cref="IdentityResourceMapperProfile"/>
+        /// Registers the identity resource entity/model mappings.
         /// </summary>
-        public IdentityResourceMapperProfile()
+        /// <param name="config">The Mapster configuration.</param>
+        public void Register(TypeAdapterConfig config)
         {
-            CreateMap<Entities.IdentityResourceProperty, KeyValuePair<string, string>>()
-                .ReverseMap();
+            config.NewConfig<KeyValuePair<string, string>, Entities.IdentityResourceProperty>()
+                .Map(dest => dest.Key, src => src.Key)
+                .Map(dest => dest.Value, src => src.Value);
 
-            CreateMap<Entities.IdentityResource, Models.IdentityResource>(MemberList.Destination)
-                .ConstructUsing(src => new Models.IdentityResource())
-                .ReverseMap();
+            config.NewConfig<Entities.IdentityResourceClaim, string>().MapWith(src => src.Type);
+            config.NewConfig<string, Entities.IdentityResourceClaim>().MapWith(src => new Entities.IdentityResourceClaim { Type = src });
 
-            CreateMap<Entities.IdentityResourceClaim, string>()
-               .ConstructUsing(x => x.Type)
-               .ReverseMap()
-               .ForMember(dest => dest.Type, opt => opt.MapFrom(src => src));
+            config.NewConfig<Entities.IdentityResource, Models.IdentityResource>()
+                .IgnoreNullValues(true)
+                .Map(dest => dest.Properties,
+                    src => src.Properties == null
+                        ? new Dictionary<string, string>()
+                        : src.Properties.ToDictionary(p => p.Key, p => p.Value));
+
+            config.NewConfig<Models.IdentityResource, Entities.IdentityResource>();
         }
     }
 }

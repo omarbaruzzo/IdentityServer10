@@ -15,27 +15,30 @@ namespace IdentityServer10.EntityFramework.Mappers
     /// <summary>
     /// Defines entity/model mapping for scopes.
     /// </summary>
-    /// <seealso cref="AutoMapper.Profile" />
-    public class ScopeMapperProfile : Profile
+    /// <seealso cref="Mapster.IRegister" />
+    public class ScopeMapperProfile : IRegister
     {
         /// <summary>
-        /// <see cref="ScopeMapperProfile"/>
+        /// Registers the API scope entity/model mappings.
         /// </summary>
-        public ScopeMapperProfile()
+        /// <param name="config">The Mapster configuration.</param>
+        public void Register(TypeAdapterConfig config)
         {
-            CreateMap<Entities.ApiScopeProperty, KeyValuePair<string, string>>()
-                .ReverseMap();
+            config.NewConfig<KeyValuePair<string, string>, Entities.ApiScopeProperty>()
+                .Map(dest => dest.Key, src => src.Key)
+                .Map(dest => dest.Value, src => src.Value);
 
-            CreateMap<Entities.ApiScopeClaim, string>()
-               .ConstructUsing(x => x.Type)
-               .ReverseMap()
-               .ForMember(dest => dest.Type, opt => opt.MapFrom(src => src));
+            config.NewConfig<Entities.ApiScopeClaim, string>().MapWith(src => src.Type);
+            config.NewConfig<string, Entities.ApiScopeClaim>().MapWith(src => new Entities.ApiScopeClaim { Type = src });
 
-            CreateMap<Entities.ApiScope, Models.ApiScope>(MemberList.Destination)
-                .ConstructUsing(src => new Models.ApiScope())
-                .ForMember(x => x.Properties, opts => opts.MapFrom(x => x.Properties))
-                .ForMember(x => x.UserClaims, opts => opts.MapFrom(x => x.UserClaims))
-                .ReverseMap();
+            config.NewConfig<Entities.ApiScope, Models.ApiScope>()
+                .IgnoreNullValues(true)
+                .Map(dest => dest.Properties,
+                    src => src.Properties == null
+                        ? new Dictionary<string, string>()
+                        : src.Properties.ToDictionary(p => p.Key, p => p.Value));
+
+            config.NewConfig<Models.ApiScope, Entities.ApiScope>();
         }
     }
 }

@@ -11,7 +11,6 @@
 */
 
 using IdentityServer10.Models;
-using Microsoft.Extensions.Logging.Abstractions;
 
 namespace IdentityServer10.EntityFramework.Mappers
 {
@@ -22,13 +21,11 @@ namespace IdentityServer10.EntityFramework.Mappers
     {
         static PersistedGrantMappers()
         {
-            Mapper = new MapperConfiguration(
-                    cfg => cfg.AddProfile<PersistedGrantMapperProfile>(),
-                    NullLoggerFactory.Instance)
-                .CreateMapper();
+            Config = new TypeAdapterConfig();
+            Config.Apply(new PersistedGrantMapperProfile());
         }
 
-        internal static IMapper Mapper { get; }
+        internal static TypeAdapterConfig Config { get; }
 
         /// <summary>
         /// Maps an entity to a model.
@@ -37,7 +34,7 @@ namespace IdentityServer10.EntityFramework.Mappers
         /// <returns></returns>
         public static PersistedGrant ToModel(this Entities.PersistedGrant entity)
         {
-            return entity == null ? null : Mapper.Map<PersistedGrant>(entity);
+            return entity == null ? null : entity.Adapt<PersistedGrant>(Config);
         }
 
         /// <summary>
@@ -47,7 +44,7 @@ namespace IdentityServer10.EntityFramework.Mappers
         /// <returns></returns>
         public static Entities.PersistedGrant ToEntity(this PersistedGrant model)
         {
-            return model == null ? null : Mapper.Map<Entities.PersistedGrant>(model);
+            return model == null ? null : model.Adapt<Entities.PersistedGrant>(Config);
         }
 
         /// <summary>
@@ -57,7 +54,7 @@ namespace IdentityServer10.EntityFramework.Mappers
         /// <param name="entity">The entity.</param>
         public static void UpdateEntity(this PersistedGrant model, Entities.PersistedGrant entity)
         {
-            Mapper.Map(model, entity);
+            model.Adapt(entity, Config);
         }
     }
 }

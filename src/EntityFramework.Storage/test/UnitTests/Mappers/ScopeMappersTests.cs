@@ -21,9 +21,9 @@ namespace IdentityServer10.EntityFramework.UnitTests.Mappers;
 public class ScopesMappersTests
 {
     [Fact]
-    public void ScopeAutomapperConfigurationIsValid()
+    public void ScopeMapsterConfigurationIsValid()
     {
-        ScopeMappers.Mapper.ConfigurationProvider.AssertConfigurationIsValid();
+        ScopeMappers.Config.Compile();
     }
 
     [Fact]

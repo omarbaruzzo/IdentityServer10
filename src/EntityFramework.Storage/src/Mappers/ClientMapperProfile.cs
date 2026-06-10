@@ -17,62 +17,58 @@ namespace IdentityServer10.EntityFramework.Mappers
     /// <summary>
     /// Defines entity/model mapping for clients.
     /// </summary>
-    /// <seealso cref="AutoMapper.Profile" />
-    public class ClientMapperProfile : Profile
+    /// <seealso cref="Mapster.IRegister" />
+    public class ClientMapperProfile : IRegister
     {
         /// <summary>
-        /// <see>
-        ///     <cref>{ClientMapperProfile}</cref>
-        /// </see>
+        /// Registers the client entity/model mappings.
         /// </summary>
-        public ClientMapperProfile()
+        /// <param name="config">The Mapster configuration.</param>
+        public void Register(TypeAdapterConfig config)
         {
-            CreateMap<Entities.ClientProperty, KeyValuePair<string, string>>()
-                .ReverseMap();
+            config.NewConfig<KeyValuePair<string, string>, Entities.ClientProperty>()
+                .Map(dest => dest.Key, src => src.Key)
+                .Map(dest => dest.Value, src => src.Value);
 
-            CreateMap<Entities.Client, Models.Client>()
-                .ForMember(dest => dest.ProtocolType, opt => opt.Condition(srs => srs != null))
-                .ForMember(x => x.AllowedIdentityTokenSigningAlgorithms, opts => opts.ConvertUsing(AllowedSigningAlgorithmsConverter.Converter, x => x.AllowedIdentityTokenSigningAlgorithms))
-                .ReverseMap()
-                .ForMember(x => x.AllowedIdentityTokenSigningAlgorithms, opts => opts.ConvertUsing(AllowedSigningAlgorithmsConverter.Converter, x => x.AllowedIdentityTokenSigningAlgorithms));
+            config.NewConfig<Entities.ClientCorsOrigin, string>().MapWith(src => src.Origin);
+            config.NewConfig<string, Entities.ClientCorsOrigin>().MapWith(src => new Entities.ClientCorsOrigin { Origin = src });
 
-            CreateMap<Entities.ClientCorsOrigin, string>()
-                .ConstructUsing(src => src.Origin)
-                .ReverseMap()
-                .ForMember(dest => dest.Origin, opt => opt.MapFrom(src => src));
+            config.NewConfig<Entities.ClientIdPRestriction, string>().MapWith(src => src.Provider);
+            config.NewConfig<string, Entities.ClientIdPRestriction>().MapWith(src => new Entities.ClientIdPRestriction { Provider = src });
 
-            CreateMap<Entities.ClientIdPRestriction, string>()
-                .ConstructUsing(src => src.Provider)
-                .ReverseMap()
-                .ForMember(dest => dest.Provider, opt => opt.MapFrom(src => src));
+            config.NewConfig<Entities.ClientScope, string>().MapWith(src => src.Scope);
+            config.NewConfig<string, Entities.ClientScope>().MapWith(src => new Entities.ClientScope { Scope = src });
 
-            CreateMap<Entities.ClientClaim, ClientClaim>(MemberList.None)
-                .ConstructUsing(src => new ClientClaim(src.Type, src.Value, ClaimValueTypes.String))
-                .ReverseMap();
+            config.NewConfig<Entities.ClientPostLogoutRedirectUri, string>().MapWith(src => src.PostLogoutRedirectUri);
+            config.NewConfig<string, Entities.ClientPostLogoutRedirectUri>().MapWith(src => new Entities.ClientPostLogoutRedirectUri { PostLogoutRedirectUri = src });
 
-            CreateMap<Entities.ClientScope, string>()
-                .ConstructUsing(src => src.Scope)
-                .ReverseMap()
-                .ForMember(dest => dest.Scope, opt => opt.MapFrom(src => src));
+            config.NewConfig<Entities.ClientRedirectUri, string>().MapWith(src => src.RedirectUri);
+            config.NewConfig<string, Entities.ClientRedirectUri>().MapWith(src => new Entities.ClientRedirectUri { RedirectUri = src });
 
-            CreateMap<Entities.ClientPostLogoutRedirectUri, string>()
-                .ConstructUsing(src => src.PostLogoutRedirectUri)
-                .ReverseMap()
-                .ForMember(dest => dest.PostLogoutRedirectUri, opt => opt.MapFrom(src => src));
+            config.NewConfig<Entities.ClientGrantType, string>().MapWith(src => src.GrantType);
+            config.NewConfig<string, Entities.ClientGrantType>().MapWith(src => new Entities.ClientGrantType { GrantType = src });
 
-            CreateMap<Entities.ClientRedirectUri, string>()
-                .ConstructUsing(src => src.RedirectUri)
-                .ReverseMap()
-                .ForMember(dest => dest.RedirectUri, opt => opt.MapFrom(src => src));
+            config.NewConfig<Entities.ClientClaim, ClientClaim>()
+                .MapWith(src => new ClientClaim(src.Type, src.Value, ClaimValueTypes.String));
+            config.NewConfig<ClientClaim, Entities.ClientClaim>()
+                .Map(dest => dest.Type, src => src.Type)
+                .Map(dest => dest.Value, src => src.Value);
 
-            CreateMap<Entities.ClientGrantType, string>()
-                .ConstructUsing(src => src.GrantType)
-                .ReverseMap()
-                .ForMember(dest => dest.GrantType, opt => opt.MapFrom(src => src));
+            config.NewConfig<Entities.ClientSecret, Models.Secret>();
+            config.NewConfig<Models.Secret, Entities.ClientSecret>();
 
-            CreateMap<Entities.ClientSecret, Models.Secret>(MemberList.Destination)
-                .ForMember(dest => dest.Type, opt => opt.Condition(srs => srs != null))
-                .ReverseMap();
+            config.NewConfig<Entities.Client, Models.Client>()
+                .IgnoreNullValues(true)
+                .Map(dest => dest.AllowedIdentityTokenSigningAlgorithms,
+                    src => AllowedSigningAlgorithmsConverter.Convert(src.AllowedIdentityTokenSigningAlgorithms))
+                .Map(dest => dest.Properties,
+                    src => src.Properties == null
+                        ? new Dictionary<string, string>()
+                        : src.Properties.ToDictionary(p => p.Key, p => p.Value));
+
+            config.NewConfig<Models.Client, Entities.Client>()
+                .Map(dest => dest.AllowedIdentityTokenSigningAlgorithms,
+                    src => AllowedSigningAlgorithmsConverter.Convert(src.AllowedIdentityTokenSigningAlgorithms));
         }
     }
 }

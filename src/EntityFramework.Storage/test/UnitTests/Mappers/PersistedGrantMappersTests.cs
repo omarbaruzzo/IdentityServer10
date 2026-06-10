@@ -20,9 +20,9 @@ namespace IdentityServer10.EntityFramework.UnitTests.Mappers;
 public class PersistedGrantMappersTests
 {
     [Fact]
-    public void PersistedGrantAutomapperConfigurationIsValid()
+    public void PersistedGrantMapsterConfigurationIsValid()
     {
-        PersistedGrantMappers.Mapper.ConfigurationProvider.AssertConfigurationIsValid();
+        PersistedGrantMappers.Config.Compile();
     }
 
     [Fact]
