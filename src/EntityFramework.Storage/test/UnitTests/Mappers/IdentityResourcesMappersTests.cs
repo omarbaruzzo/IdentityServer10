@@ -19,9 +19,9 @@ namespace IdentityServer10.EntityFramework.UnitTests.Mappers;
 public class IdentityResourcesMappersTests
 {
     [Fact]
-    public void IdentityResourceAutomapperConfigurationIsValid()
+    public void IdentityResourceMapsterConfigurationIsValid()
     {
-        IdentityResourceMappers.Mapper.ConfigurationProvider.AssertConfigurationIsValid();
+        IdentityResourceMappers.Config.Compile();
     }
 
     [Fact]

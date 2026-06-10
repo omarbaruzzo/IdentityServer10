@@ -10,8 +10,6 @@
  copies or substantial portions of the Software.
 */
 
-using Microsoft.Extensions.Logging.Abstractions;
-
 namespace IdentityServer10.EntityFramework.Mappers
 {
     /// <summary>
@@ -21,13 +19,11 @@ namespace IdentityServer10.EntityFramework.Mappers
     {
         static ClientMappers()
         {
-            Mapper = new MapperConfiguration(
-                    cfg => cfg.AddProfile<ClientMapperProfile>(),
-                    NullLoggerFactory.Instance)
-                .CreateMapper();
+            Config = new TypeAdapterConfig();
+            Config.Apply(new ClientMapperProfile());
         }
 
-        internal static IMapper Mapper { get; }
+        internal static TypeAdapterConfig Config { get; }
 
         /// <summary>
         /// Maps an entity to a model.
@@ -36,7 +32,7 @@ namespace IdentityServer10.EntityFramework.Mappers
         /// <returns></returns>
         public static Models.Client ToModel(this Entities.Client entity)
         {
-            return Mapper.Map<Models.Client>(entity);
+            return entity?.Adapt<Models.Client>(Config);
         }
 
         /// <summary>
@@ -46,7 +42,7 @@ namespace IdentityServer10.EntityFramework.Mappers
         /// <returns></returns>
         public static Entities.Client ToEntity(this Models.Client model)
         {
-            return Mapper.Map<Entities.Client>(model);
+            return model?.Adapt<Entities.Client>(Config);
         }
     }
 }

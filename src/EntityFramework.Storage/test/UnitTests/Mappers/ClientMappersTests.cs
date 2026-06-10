@@ -22,9 +22,9 @@ namespace IdentityServer10.EntityFramework.UnitTests.Mappers;
 public class ClientMappersTests
 {
     [Fact]
-    public void AutomapperConfigurationIsValid()
+    public void MapsterConfigurationIsValid()
     {
-        ClientMappers.Mapper.ConfigurationProvider.AssertConfigurationIsValid();
+        ClientMappers.Config.Compile();
     }
 
     [Fact]

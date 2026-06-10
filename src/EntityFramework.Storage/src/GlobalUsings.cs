@@ -10,7 +10,7 @@
  copies or substantial portions of the Software.
 */
 
-global using AutoMapper;
+global using Mapster;
 global using IdentityModel;
 global using IdentityServer10.EntityFramework.DbContexts;
 global using IdentityServer10.EntityFramework.Extensions;
